@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Rahul Khan Suvo and I'm a Junior Web Developer from Bangladesh</h2>
+<h2 align="left">Hi 👋! My name is <span style="color: #ff6347;">Rahul Khan Suvo</span> and I'm a <span style="color: #1e90ff;">Junior Web Developer</span> from <span style="color: #32cd32;">Bangladesh</span></h2>
 
 ###
 
@@ -60,43 +60,43 @@
 
 ###
 
-## About Me
+<h2 align="left" style="color: #ff6347;">About Me</h2>
 
-I'm a 24-year-old junior web developer with a strong passion for learning and creating web applications. My journey in web development started recently, and I'm excited about the endless possibilities it holds.
+<p>I'm a 24-year-old junior web developer with a strong passion for learning and creating web applications. My journey in web development started recently, and I'm excited about the endless possibilities it holds.</p>
 
-### 🌱 Currently Learning
+### 🌱 <span style="color: #32cd32;">Currently Learning</span>
 - Advanced CSS techniques and animations.
 - Deep dive into JavaScript and React.
 - Improving my English conversational skills.
 
-### 📚 Education
+### 📚 <span style="color: #1e90ff;">Education</span>
 - Studied Islamic History and Culture at National University.
 - Currently focused on self-learning web development through various online resources.
 
-### 🌟 Goals
+### 🌟 <span style="color: #ffa500;">Goals</span>
 - Become a proficient web developer.
 - Master HTML, CSS, JavaScript, Tailwind, and React.
 - Build and contribute to open-source projects.
 - Continuously improve my English skills for better communication.
 
-### ⏰ Schedule
+### ⏰ <span style="color: #ff1493;">Schedule</span>
 - **Morning**: Dedicated learning time, starting my day early at 5 AM.
 - **Afternoon**: Working from 12 PM to 6 PM.
 - **Evening**: More learning and practice.
 
-### 📫 How to reach me
+### 📫 <span style="color: #8a2be2;">How to reach me</span>
 - **Email**: rahul.khan.suvo@gmail.com
 - **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile/)
 - **Twitter**: [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
 
-### 📈 GitHub Stats
+### 📈 <span style="color: #ff4500;">GitHub Stats</span>
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=rahulkhansuvo&theme=dracula" alt="streak stats" />
   <img src="https://activity-graph.herokuapp.com/graph?username=rahulkhansuvo&theme=dracula" alt="activity graph" />
 </div>
 
-### 🗂️ Projects
+### 🗂️ <span style="color: #00ced1;">Projects</span>
 Check out some of my projects:
 - [Project 1](https://github.com/rahulkhansuvo/project1)
 - [Project 2](https://github.com/rahulkhansuvo/project2)
-- [Project 3](https://github.com/rahulkhansuvo/project3)
+- [Project 3
