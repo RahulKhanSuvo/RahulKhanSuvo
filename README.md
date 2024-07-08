@@ -1,25 +1,46 @@
-<h1 align="center">Hi 👋, I'm Rahul Khan Suvo</h1>
-<h3 align="center">A passionate frontend developer from Bangladesh</h3>
+## Hi there, I'm Rahul Khan Suvo 👋
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=rahulkhansuvo&label=Profile%20views&color=0e75b6&style=flat" alt="rahulkhansuvo" /> </p>
+### Junior Web Developer | Passionate Learner
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=rahulkhansuvo" alt="rahulkhansuvo" /></a> </p>
+I'm a 24-year-old junior web developer with a strong passion for learning and creating web applications. My journey in web development started recently, and I'm excited about the endless possibilities it holds.
 
-- 🌱 I’m currently learning **web development**
+### 🛠️ Technologies & Tools
+- ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) The backbone of all web content.
+- ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) Basic knowledge with a focus on learning advanced techniques and animations.
+- ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) Proficient in using this utility-first CSS framework to build responsive designs quickly.
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) Understanding the core concepts and actively learning more.
+- ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black) Basic knowledge, looking forward to deepening my skills.
 
-- 📫 How to reach me **rahul.khan.suvo@gmail.com**
+### 🌱 Currently Learning
+- Advanced CSS techniques and animations.
+- Deep dive into JavaScript and React.
+- Improving my English conversational skills.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/https://www.linkedin.com/in/rahul-khan-suvo-855a70264/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/rahul-khan-suvo-855a70264/" height="30" width="40" /></a>
-<a href="https://fb.com/https://www.facebook.com/cdrdeadpool/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/cdrdeadpool/" height="30" width="40" /></a>
-</p>
+### 📚 Education
+- Studied Islamic History and Culture at National University.
+- Currently focused on self-learning web development through various online resources.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> </p>
+### 🌟 Goals
+- Become a proficient web developer.
+- Master HTML, CSS, JavaScript, Tailwind, and React.
+- Build and contribute to open-source projects.
+- Continuously improve my English skills for better communication.
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=rahulkhansuvo&show_icons=true&locale=en&layout=compact" alt="rahulkhansuvo" /></p>
+### ⏰ Schedule
+- **Morning**: Dedicated learning time, starting my day early at 5 AM.
+- **Afternoon**: Working from 12 PM to 6 PM.
+- **Evening**: More learning and practice.
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=rahulkhansuvo&show_icons=true&locale=en" alt="rahulkhansuvo" /></p>
+### 📫 How to reach me
+- **Email**: ![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [your.email@example.com]
+- **LinkedIn**: ![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white) [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile/)
+- **Twitter**: ![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white) [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=rahulkhansuvo&" alt="rahulkhansuvo" /></p>
+### 📈 GitHub Stats
+![Rahul Khan Suvo's GitHub Stats](https://github-readme-stats.vercel.app/api?username=rahulkhansuvo&show_icons=true&theme=radical)
+
+### 🗂️ Projects
+Check out some of my projects:
+- [Project 1](https://github.com/rahulkhansuvo/project1)
+- [Project 2](https://github.com/rahulkhansuvo/project2)
+- [Project 3](https://github.com/rahulkhansuvo/project3)
