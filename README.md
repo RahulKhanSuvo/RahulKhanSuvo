@@ -37,7 +37,10 @@ I'm a 24-year-old junior web developer with a strong passion for learning and cr
 - **Twitter**: ![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white) [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
 
 ### 📈 GitHub Stats
-![Rahul Khan Suvo's GitHub Stats](https://github-readme-stats.vercel.app/api?username=rahulkhansuvo&show_icons=true&theme=radical)
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=rahulkhansuvo&show_icons=true&theme=radical" alt="Rahul Khan Suvo's GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rahulkhansuvo&theme=radical" alt="Rahul Khan Suvo's GitHub Streak Stats" />
+</div>
 
 ### 🗂️ Projects
 Check out some of my projects:
@@ -45,10 +48,12 @@ Check out some of my projects:
 - [Project 2](https://github.com/rahulkhansuvo/project2)
 - [Project 3](https://github.com/rahulkhansuvo/project3)
 
-###
+<div align="center">
+  <img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
+</div>
 
-<br clear="both">
-
-<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
-
-###
+### 🎨 Code Animation
+```html
+<div align="center">
+  <img src="https://cdn.dribbble.com/users/1187836/screenshots/6539429/programer.gif" alt="Coding Animation" width="500" />
+</div>
