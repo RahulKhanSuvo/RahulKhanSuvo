@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" alt="Header GIF" />
+</p>
 <h1 align="center" style="color:#ff6347;">Hi, I'm Rahul Khan Suvo! 👋</h1>
 
 <p align="center" style="color:#4682b4;">
