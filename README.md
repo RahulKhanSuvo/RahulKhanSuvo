@@ -44,3 +44,11 @@ Check out some of my projects:
 - [Project 1](https://github.com/rahulkhansuvo/project1)
 - [Project 2](https://github.com/rahulkhansuvo/project2)
 - [Project 3](https://github.com/rahulkhansuvo/project3)
+
+###
+
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/maurodesouza/maurodesouza/output/snake.svg" alt="Snake animation" />
+
+###
