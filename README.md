@@ -53,3 +53,8 @@
     <img src="https://img.shields.io/badge/-Facebook-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" />
   </a>
 </p>
+<p align="center">
+  <a href="https://visitcount.itsvg.in">
+    <img src="https://visitcount.itsvg.in/api?id=RahulKhanSuvo&icon=0&color=0" alt="Profile visit count" />
+  </a>
+</p>
