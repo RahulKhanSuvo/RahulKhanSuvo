@@ -57,7 +57,7 @@
   <a href="mailto:rahul.khan.suvo@gmail.com?subject=Hello%20Rahul&body=I%E2%80%99d%20like%20to%20connect%20with%20you" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo"  />
   </a>
-  <a href="https://www.linkedin.com/in/rahulkhansuvo" target="_blank">
+  <a href="https://www.linkedin.com/in/rahul-khan-suvo" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
   </a>
   <a href="https://www.facebook.com/RahulKhanSuvo/" target="_blank">
