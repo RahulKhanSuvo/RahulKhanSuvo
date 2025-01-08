@@ -1,6 +1,7 @@
 <div align="center">
-  <img height="290" src="https://github.com/RahulKhanSuvo/RahulKhanSuvo/blob/main/banner.png?raw=true"  />
+  <img src="https://github.com/RahulKhanSuvo/RahulKhanSuvo/blob/main/banner.png?raw=true" width="100%" height="auto" alt="Profile Banner"/>
 </div>
+
 
 ###
 
