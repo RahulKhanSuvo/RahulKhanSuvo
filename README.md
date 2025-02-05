@@ -16,7 +16,28 @@
 
 ###
 
-<p align="left">Hi there! I'm Rahul Khan Suvo, a passionate Frontend Developer on a journey to become a skilled MERN Stack Developer. I enjoy creating sleek, functional, and user-friendly web applications with a focus on performance and responsiveness.<br><br>👨‍💻 What I Do:<br>Building dynamic, interactive user interfaces using React.<br>Designing and implementing responsive web designs with HTML, CSS, JavaScript, and frameworks like Tailwind CSS.<br>Exploring backend development with Node.js, Express.js, and MongoDB.<br>🌟 Current Projects:<br>Carola: A feature-rich car rental system focused on usability and advanced filtering techniques.<br>Chill Gamer: A user-friendly platform for game reviews, emphasizing simplicity and functionality.<br>🚀 Future Goals:<br>Mastering advanced React concepts and React Router.<br>Expanding my portfolio with diverse, real-world projects.<br>Preparing for interviews and securing a role in a reputed company.<br>✨ Fun Facts:<br>I’m a cycling enthusiast who loves exploring hilly areas, forests, and the sea.</p>
+# 👋 Hi, I'm **Rahul Khan Suvo**  
+### 🚀 Frontend Developer | MERN Stack Enthusiast  
+
+Passionate about crafting sleek, high-performance web applications with **React.js, Next.js, and Tailwind CSS**. I love turning ideas into reality through clean, efficient code. Currently diving deeper into backend development with **Node.js, Express.js, and MongoDB** to become a **Full-Stack Developer**.
+
+---
+
+## 🚀 **What I Do**
+- ⚡ Build dynamic & interactive **UIs** using **React & Next.js**.  
+- 🎨 Design **responsive, modern web apps** with **Tailwind CSS**.  
+- 🛠️ Develop backend APIs with **Node.js, Express, and MongoDB**.  
+- 🔍 Optimize **performance & SEO** for better user experience.  
+
+---
+
+## 🌟 **Current Activities**
+- 🚗 **Building Carola** → A full-featured **Car Rental Platform**.  
+- 🎮 **Developing Chill Gamer** → A **game review platform**.  
+- 🔥 **Exploring Advanced React Concepts** → Performance optimization, React Query, Zustand.  
+- 📚 **Preparing for technical interviews** & expanding my **portfolio**.  
+
+---
 
 ###
 
