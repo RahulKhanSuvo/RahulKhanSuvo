@@ -1,23 +1,9 @@
 <div align="center">
-  <img height="100%" src="https://github.com/RahulKhanSuvo/RahulKhanSuvo/blob/main/banner.png?raw=true"  />
+  <img src="https://github.com/RahulKhanSuvo/RahulKhanSuvo/blob/main/banner.png?raw=true" width="100%" alt="Banner"/>
 </div>
 
-###
-
-<h1 align="left">Rahul Khan Suvo</h1>
-
-###
-
-<h2 align="left">Frontend Developer</h2>
-
-###
-
-<h2 align="left">About me</h2>
-
-###
-
 # 👋 Hi, I'm **Rahul Khan Suvo**  
-### 🚀 Frontend Developer | MERN Stack Enthusiast  
+## 🚀 Frontend Developer | MERN Stack Enthusiast  
 
 Passionate about crafting sleek, high-performance web applications with **React.js, Next.js, and Tailwind CSS**. I love turning ideas into reality through clean, efficient code. Currently diving deeper into backend development with **Node.js, Express.js, and MongoDB** to become a **Full-Stack Developer**.
 
@@ -38,7 +24,6 @@ Passionate about crafting sleek, high-performance web applications with **React.
 - 📚 **Preparing for technical interviews** & expanding my **portfolio**.  
 
 ---
-
 ###
 
 <h2 align="left">I code with</h2>
