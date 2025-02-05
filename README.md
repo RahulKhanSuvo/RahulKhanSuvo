@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/RahulKhanSuvo/RahulKhanSuvo/blob/main/banner.png?raw=true" width="100%" alt="Banner"/>
+  <img src="https://streak-stats.demolab.com/?user=RahulKhanSuvo&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5&order=3" width="100%" alt="Banner"/>
 </div>
 
 # 👋 Hi, I'm **Rahul Khan Suvo**  
