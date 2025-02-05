@@ -3,7 +3,7 @@
 </div>
 
 # 👋 Hi, I'm **Rahul Khan Suvo**  
-## 🚀 Frontend Developer | MERN Stack Enthusiast  
+##  Frontend Developer | MERN Stack Enthusiast  
 Passionate about crafting sleek, high-performance web applications with **React.js, Next.js, and Tailwind CSS**. I love turning ideas into reality through clean, efficient code. Currently diving deeper into backend development with **Node.js, Express.js, and MongoDB** to become a **Full-Stack Developer**.
 
 ---
