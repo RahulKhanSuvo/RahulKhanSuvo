@@ -53,7 +53,7 @@ Passionate about crafting sleek, high-performance web applications with **React.
 
 ###
 
-<h2 align="left">Social Links</h2>
+<h2 align="left">📬 Connect with Me</h2>
 
 ###
 
