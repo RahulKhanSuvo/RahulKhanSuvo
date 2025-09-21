@@ -58,7 +58,7 @@ Passionate about crafting sleek, high-performance web applications with **React.
 ###
 
 <div align="center">
-  <a href="mailto:rahulkhan@gmail.com?subject=Hello%20Rahul&body=I%E2%80%99d%20like%20to%20connect%20with%20you" target="_blank">
+  <a href="mailto:rahul.khan.suvo@gmail.com?subject=Hello%20Rahul&body=I%E2%80%99d%20like%20to%20connect%20with%20you" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo"  />
   </a>
   <a href="https://www.linkedin.com/in/rahulkhansuvo" target="_blank">
@@ -89,9 +89,6 @@ Passionate about crafting sleek, high-performance web applications with **React.
 
 ###
 
-<br clear="both">
-
-<img src="https://raw.githubusercontent.com/RahulKhanSuvo/RahulKhanSuvo/output/snake.svg" alt="Snake animation" />
 
 ###
 
