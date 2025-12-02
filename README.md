@@ -1,6 +1,6 @@
-<div align="center">
+<!-- <div align="center">
   <img src="https://github.com/RahulKhanSuvo/RahulKhanSuvo/blob/main/banner.png" width="100%" alt="Banner"/>
-</div>
+</div> -->
 
 # 👋 Hi, I'm **Rahul Khan Suvo**  
 ##  Frontend Developer | MERN Stack Enthusiast  
