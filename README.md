@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Rahul Khan Suvo  
+# Hi, I'm Rahul Khan Suvo  
 ### Frontend Developer | MERN Stack
 
 I specialize in building modern, high-performance web applications using **React, Next.js, TypeScript, and Redux**. Currently expanding into full-stack development with **Node.js, Express, and MongoDB** to deliver complete solutions.
