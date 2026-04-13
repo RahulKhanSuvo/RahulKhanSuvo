@@ -39,15 +39,12 @@
 ![JavaScript](https://skillicons.dev/icons?i=js)
 ![TypeScript](https://skillicons.dev/icons?i=ts)
 ![Redux](https://skillicons.dev/icons?i=redux)
-![Zustand](https://shields.io)
-![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
-![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=flat-square&logo=reacthookform&logoColor=white)
+<img src="https://i.ibb.co.com/Vc59n2db/zustand-original-512px.png" alt="Zustand Logo" width="50" />
+<img src="https://i.ibb.co.com/5hYd61t3/react-query-icon.png" alt="React Query" width="50" />
 ![TailwindCSS](https://skillicons.dev/icons?i=tailwind)
-![ShadcnUI](https://img.shields.io/badge/ShadcnUI-000?style=flat-square&logo=shadcnui&logoColor=white)
-![Zod](https://shields.io)
-![Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 ![HTML5](https://skillicons.dev/icons?i=html)
 ![CSS3](https://skillicons.dev/icons?i=css)
+
 
 ### Backend
 ![Node.js](https://skillicons.dev/icons?i=nodejs)
@@ -56,15 +53,11 @@
 ![MongoDB](https://skillicons.dev/icons?i=mongodb)
 ![Firebase](https://skillicons.dev/icons?i=firebase)
 ![Prisma](https://skillicons.dev/icons?i=prisma)
-![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongodb&logoColor=white)
 
 ### Tools & Platforms
 ![Git](https://skillicons.dev/icons?i=git)
 ![GitHub](https://skillicons.dev/icons?i=github)
 ![VS Code](https://skillicons.dev/icons?i=vscode)
-![Chrome DevTools](https://img.shields.io/badge/Chrome_DevTools-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
-![Webflow](https://img.shields.io/badge/Webflow-4353FF?style=flat-square&logo=webflow&logoColor=white)
-![Framer](https://img.shields.io/badge/Framer-0055FF?style=flat-square&logo=framer&logoColor=white)
 ![Figma](https://skillicons.dev/icons?i=figma)
 
 ---
