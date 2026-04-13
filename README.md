@@ -1,7 +1,7 @@
 <!-- Header with animated typing -->
-<h1 align="center">
+<!-- <h1 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=Hi%2C+I'm+MD.+Rahul+Khan+Suvo;Frontend+Developer;Full‑Stack+in+progress" alt="Typing SVG" />
-</h1>
+</h1> -->
 
 <p align="center">
   <img src="https://img.shields.io/badge/Dhaka-Bangladesh-blue?style=flat-square&logo=googlemaps&logoColor=white" />
