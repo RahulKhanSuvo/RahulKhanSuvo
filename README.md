@@ -31,7 +31,7 @@
 
 ---
 
-## 🧰 Full Tech Stack (2026 Edition)
+## 🧰 Full Tech Stack
 
 ### Frontend
 ![React](https://skillicons.dev/icons?i=react)
@@ -39,12 +39,15 @@
 ![JavaScript](https://skillicons.dev/icons?i=js)
 ![TypeScript](https://skillicons.dev/icons?i=ts)
 ![Redux](https://skillicons.dev/icons?i=redux)
+![Zustand](https://img.shields.io/badge/Zustand-000?style=flat-square&logo=react&logoColor=61DAFB)
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=flat-square&logo=reacthookform&logoColor=white)
 ![TailwindCSS](https://skillicons.dev/icons?i=tailwind)
+![ShadcnUI](https://img.shields.io/badge/ShadcnUI-000?style=flat-square&logo=shadcnui&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white)
+![Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 ![HTML5](https://skillicons.dev/icons?i=html)
 ![CSS3](https://skillicons.dev/icons?i=css)
-
-**Additional frontend libraries:**  
-`Zustand` · `TanStack Query` · `React Hook Form` · `ShadcnUI` · `Zod` · `Motion` (Framer Motion)
 
 ### Backend
 ![Node.js](https://skillicons.dev/icons?i=nodejs)
@@ -53,20 +56,16 @@
 ![MongoDB](https://skillicons.dev/icons?i=mongodb)
 ![Firebase](https://skillicons.dev/icons?i=firebase)
 ![Prisma](https://skillicons.dev/icons?i=prisma)
-
-**Additional backend tools:**  
-`Mongoose`
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongodb&logoColor=white)
 
 ### Tools & Platforms
 ![Git](https://skillicons.dev/icons?i=git)
 ![GitHub](https://skillicons.dev/icons?i=github)
 ![VS Code](https://skillicons.dev/icons?i=vscode)
+![Chrome DevTools](https://img.shields.io/badge/Chrome_DevTools-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
+![Webflow](https://img.shields.io/badge/Webflow-4353FF?style=flat-square&logo=webflow&logoColor=white)
+![Framer](https://img.shields.io/badge/Framer-0055FF?style=flat-square&logo=framer&logoColor=white)
 ![Figma](https://skillicons.dev/icons?i=figma)
-
-**Other tools:**  
-`Chrome DevTools` · `Webflow` · `Framer`
-
-> *Most icons from [skillicons.dev](https://skillicons.dev). For unsupported tools, names are shown as text.*
 
 ---
 
