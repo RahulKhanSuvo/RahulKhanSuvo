@@ -1,27 +1,4 @@
-<!-- Header with animated typing -->
-<!-- <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=Hi%2C+I'm+MD.+Rahul+Khan+Suvo;Frontend+Developer;Full‑Stack+in+progress" alt="Typing SVG" />
-</h1> -->
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Dhaka-Bangladesh-blue?style=flat-square&logo=googlemaps&logoColor=white" />
-  <img src="https://img.shields.io/badge/rahul.khan.suvo@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" />
-  <img src="https://img.shields.io/badge/+8801609553810-25D366?style=flat-square&logo=whatsapp&logoColor=white" />
-</p>
-
-<p align="center">
-  <a href="https://linkedin.com/in/rahulkhansuvo"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="https://github.com/RahulKhanSuvo"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Portfolio-FF5722?style=flat-square&logo=react&logoColor=white" /></a>
-</p>
-
----
-
-## 🎯 Career Objective
-
-> **Frontend-focused Full-Stack Developer** with 1 year of professional experience developing responsive web applications. Experienced in cross-team collaboration and direct client communication, translating business requirements into effective and practical solutions.
-
----
 
 ## 💼 Work Experience
 
