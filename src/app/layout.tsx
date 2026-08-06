@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { humane, neueMontreal } from "@/fonts";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/shared/Navbar";
 
 export const metadata: Metadata = {
   title: "Rahul Suvo",
@@ -20,7 +21,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "font-sans",
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
