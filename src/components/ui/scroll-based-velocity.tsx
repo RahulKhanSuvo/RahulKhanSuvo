@@ -156,7 +156,7 @@ function ScrollVelocityRowImpl({
         mq.removeEventListener("change", handlePRM)
       }
     }
-  }, [children, unitWidth])
+  }, [children, gap, unitWidth])
 
   const x = useTransform([baseX, unitWidth], ([v, bw]) => {
     const width = Number(bw) || 1
