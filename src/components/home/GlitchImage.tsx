@@ -13,6 +13,7 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
   const imgRef = useRef<HTMLImageElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const hoveringRef = useRef(false);
+  const cursorRef = useRef<{ nx: number; ny: number } | null>(null);
   const rafRef = useRef(0);
 
   useEffect(() => {
@@ -62,10 +63,12 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
       const ease = 1 - Math.exp(-(delta / 1000) * 4);
       tickCount++;
 
-      const cx = w * 0.18;
-      const cy = h * 0.3;
       const cw = w * 0.64;
       const ch = h * 0.4;
+      const cx0 = cursorRef.current?.nx ?? 0.5;
+      const cy0 = cursorRef.current?.ny ?? 0.5;
+      const cx = Math.min(Math.max(cx0 * w - cw / 2, 0), w - cw);
+      const cy = Math.min(Math.max(cy0 * h - ch / 2, 0), h - ch);
 
       ctx.drawImage(img, 0, 0, w, h);
 
@@ -118,14 +121,25 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
       ref={containerRef}
       className="relative h-full w-full overflow-hidden"
       onMouseEnter={() => (hoveringRef.current = true)}
-      onMouseLeave={() => (hoveringRef.current = false)}
+      onMouseMove={(e) => {
+        const rect = containerRef.current?.getBoundingClientRect();
+        if (!rect) return;
+        cursorRef.current = {
+          nx: (e.clientX - rect.left) / rect.width,
+          ny: (e.clientY - rect.top) / rect.height,
+        };
+      }}
+      onMouseLeave={() => {
+        hoveringRef.current = false;
+        cursorRef.current = null;
+      }}
     >
       <Image
         ref={imgRef}
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className="object-fill"
         draggable={false}
       />
       <canvas
