@@ -24,9 +24,17 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
     if (!ctx) return;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const work = document.createElement("canvas");
+    const workCtx = work.getContext("2d");
+    const channels = document.createElement("canvas");
+    const channelCtx = channels.getContext("2d");
     const resize = () => {
       canvas.width = Math.max(1, container.clientWidth) * dpr;
       canvas.height = Math.max(1, container.clientHeight) * dpr;
+      work.width = canvas.width;
+      work.height = canvas.height;
+      channels.width = canvas.width;
+      channels.height = canvas.height;
     };
     const ro = new ResizeObserver(resize);
     ro.observe(container);
@@ -47,7 +55,6 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
     let targetChromaX = 0;
     let last = 0;
     let tickCount = 0;
-
     const tick = (now: number) => {
       rafRef.current = requestAnimationFrame(tick);
       const img = imgRef.current;
@@ -63,8 +70,8 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
       const ease = 1 - Math.exp(-(delta / 1000) * 4);
       tickCount++;
 
-      const cw = w * 0.64;
-      const ch = h * 0.4;
+      const cw = w * 0.5;
+      const ch = h * 0.5;
       const cx0 = cursorRef.current?.nx ?? 0.5;
       const cy0 = cursorRef.current?.ny ?? 0.5;
       const cx = Math.min(Math.max(cx0 * w - cw / 2, 0), w - cw);
@@ -95,16 +102,29 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
       ctx.filter = "none";
 
       chromaX += (targetChromaX - chromaX) * ease;
-      if (Math.abs(chromaX) > 0.5) {
+      if (Math.abs(chromaX) > 0.5 && workCtx && channelCtx) {
+        const colorize = (color: string, dx: number) => {
+          workCtx.globalCompositeOperation = "source-over";
+          workCtx.clearRect(0, 0, w, h);
+          workCtx.drawImage(img, 0, 0, w, h);
+          workCtx.globalCompositeOperation = "multiply";
+          workCtx.fillStyle = color;
+          workCtx.fillRect(0, 0, w, h);
+          workCtx.globalCompositeOperation = "destination-in";
+          workCtx.drawImage(img, 0, 0, w, h);
+          channelCtx.globalCompositeOperation = "lighter";
+          channelCtx.drawImage(work, dx, 0);
+        };
+        channelCtx.globalCompositeOperation = "source-over";
+        channelCtx.clearRect(0, 0, w, h);
+        colorize("#ff0000", chromaX);
+        colorize("#00ff00", 0);
+        colorize("#0000ff", -chromaX);
         ctx.save();
         ctx.beginPath();
         ctx.rect(cx, cy, cw, ch);
         ctx.clip();
-        ctx.globalCompositeOperation = "screen";
-        ctx.globalAlpha = 0.35;
-        ctx.drawImage(img, -chromaX, 0, w, h);
-        ctx.drawImage(img, chromaX, 0, w, h);
-        ctx.globalAlpha = 1;
+        ctx.drawImage(channels, 0, 0);
         ctx.restore();
       }
     };

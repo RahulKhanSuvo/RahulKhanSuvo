@@ -3,6 +3,7 @@ import { humane, neueMontreal } from "@/fonts";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/shared/Navbar";
+import SmoothScroll from "@/providers/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Rahul Suvo",
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );
