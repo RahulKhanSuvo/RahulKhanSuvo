@@ -22,13 +22,20 @@ export const ServicesSection = ({
   };
 
   // Helper for responsive alignment container styles
-  const getAlignmentClass = (index: number, alignment?: Service["alignment"]) => {
-    const isRight = alignment === "right" || (alignment !== "left" && index % 2 === 1);
+  const getAlignmentClass = (
+    index: number,
+    alignment?: Service["alignment"],
+  ) => {
+    const isRight =
+      alignment === "right" || (alignment !== "left" && index % 2 === 1);
     return isRight ? "items-end text-right ml-auto" : "items-start text-left";
   };
 
   return (
-    <section id="services" className="py-24 sm:py-32 bg-white text-neutral-900 overflow-hidden">
+    <section
+      id="services"
+      className="py-24 sm:py-32 bg-white text-neutral-900 overflow-hidden"
+    >
       <Container className="flex flex-col">
         {/* Section Tag */}
         <div className="w-full border-t border-neutral-200 pt-6 pb-16 sm:pb-20">
@@ -62,7 +69,11 @@ export const ServicesSection = ({
                     (
                     <motion.span
                       whileHover={{ scale: 1.08 }}
-                      transition={{ type: "spring", stiffness: 350, damping: 20 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 350,
+                        damping: 20,
+                      }}
                       className="relative inline-flex items-center justify-center align-middle mx-1 sm:mx-2 h-[1.15em] w-[2.2em] sm:w-[2.6em] overflow-hidden rounded-[0.4em] border border-neutral-300 shadow-sm bg-neutral-100"
                     >
                       <Image
@@ -96,7 +107,7 @@ export const ServicesSection = ({
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className="overflow-hidden mt-4 sm:mt-5 max-w-xl flex flex-col gap-3"
+                      className="overflow-hidden mt-4 sm:mt-5 flex flex-col gap-3"
                     >
                       <p className="text-base sm:text-lg font-normal text-neutral-600 leading-relaxed">
                         {service.description}
