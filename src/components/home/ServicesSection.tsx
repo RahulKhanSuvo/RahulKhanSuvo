@@ -65,7 +65,7 @@ export const ServicesSection = ({
                   </h3>
 
                   {/* Inline Image Pill with Parentheses */}
-                  <span className="inline-flex items-baseline font-light text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] text-neutral-900">
+                  <span className="inline-flex items-center font-light text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] text-neutral-900">
                     (
                     <motion.span
                       whileHover={{ scale: 1.08 }}
@@ -74,13 +74,13 @@ export const ServicesSection = ({
                         stiffness: 350,
                         damping: 20,
                       }}
-                      className="relative inline-flex items-center justify-center align-middle mx-1 sm:mx-2 h-[1.15em] w-[2.2em] sm:w-[2.6em] overflow-hidden rounded-[0.4em] border border-neutral-300 shadow-sm bg-neutral-100"
+                      className="relative inline-flex items-center justify-center align-middle mx-1 sm:mx-2 h-[1.15em] w-[2.2em] sm:w-[2.6em] overflow-hidden rounded-2xl border border-neutral-300 shadow-sm bg-neutral-100"
                     >
                       <Image
                         src={service.image}
                         alt={service.title}
                         fill
-                        className="object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                        className="object-cover transition-all duration-500 group-hover:scale-110 "
                       />
                     </motion.span>
                     )
@@ -106,6 +106,7 @@ export const ServicesSection = ({
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
+
                       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden mt-4 sm:mt-5 flex flex-col gap-3"
                     >
