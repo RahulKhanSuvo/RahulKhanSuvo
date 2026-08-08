@@ -49,7 +49,8 @@ export const AboutSection = () => {
           className="mt-14 sm:mt-18 lg:mt-20"
         >
           <p className="text-2xl sm:text-3xl lg:text-[2.25rem] font-normal tracking-tight text-neutral-800 leading-snug sm:leading-relaxed lg:leading-[1.4]">
-            I started with the frontend because that&apos;s where an idea becomes something you can actually see, touch and use{" "}
+            I started with the frontend because that&apos;s where an idea
+            becomes something you can actually see, touch and use{" "}
             <motion.span
               whileHover={{ scale: 1.12, rotate: -2 }}
               transition={{ type: "spring", stiffness: 350, damping: 20 }}
@@ -75,7 +76,8 @@ export const AboutSection = () => {
                 className="object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
               />
             </motion.span>{" "}
-            — APIs, databases, authentication, architecture and everything that makes the interface actually work.
+            — APIs, databases, authentication, architecture and everything that
+            makes the interface actually work.
           </p>
         </motion.div>
 
@@ -125,7 +127,7 @@ export const AboutSection = () => {
               <p className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900">
                 {stat.value}
               </p>
-              <p className="text-xs sm:text-sm text-neutral-500 max-w-[14rem] leading-normal">
+              <p className="text-xs sm:text-sm text-neutral-500 max-w-56 leading-normal">
                 {stat.label}
               </p>
             </div>
