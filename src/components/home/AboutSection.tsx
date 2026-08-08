@@ -60,7 +60,7 @@ export const AboutSection = () => {
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80&auto=format&fit=crop"
                 alt="Frontend interface design"
                 fill
-                className="object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                className="object-cover transition-all duration-500 group-hover:scale-110"
               />
             </motion.span>
             . Over time, curiosity pulled me deeper into the stack{" "}
@@ -73,7 +73,7 @@ export const AboutSection = () => {
                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80&auto=format&fit=crop"
                 alt="Full stack architecture and engineering"
                 fill
-                className="object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                className="object-cover transition-all duration-500 group-hover:scale-110"
               />
             </motion.span>{" "}
             — APIs, databases, authentication, architecture and everything that
