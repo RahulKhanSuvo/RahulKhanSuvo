@@ -6,7 +6,7 @@ import Navbar from "@/components/shared/Navbar";
 import SmoothScroll from "@/providers/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Rahul Suvo",
+  title: "Rahul Khan Suvo | Software Engineer",
   description: "Frontend-focused Full Stack Developer",
 };
 
