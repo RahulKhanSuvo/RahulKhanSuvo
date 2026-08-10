@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/shared/Navbar";
 import SmoothScroll from "@/providers/SmoothScroll";
+import { Footer } from "@/components/shared/Footer";
 
 export const metadata: Metadata = {
   title: "Rahul Khan Suvo | Software Engineer",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Navbar />
         <SmoothScroll>{children}</SmoothScroll>
+        <Footer />
       </body>
     </html>
   );

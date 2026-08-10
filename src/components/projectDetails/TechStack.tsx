@@ -1,4 +1,8 @@
 import { Container } from '../common/Container';
+import {
+    ScrollVelocityContainer,
+    ScrollVelocityRow,
+} from '../ui/scroll-based-velocity';
 
 interface TechStackProps {
     stack?: string[];
@@ -6,35 +10,38 @@ interface TechStackProps {
 }
 
 export default function TechStack({
-    stack = ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Figma'],
+    stack = ['Next.js', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'Figma', 'PostgreSQL', 'Prisma', 'Vercel'],
     index = '05 — STACK',
 }: TechStackProps) {
     return (
-        <section className="py-16 bg-white text-gray-900 font-sans border-t border-gray-200">
-            <Container>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* Index label */}
-                    <div className="lg:col-span-3">
-                        <span className="text-xs font-mono uppercase tracking-wider text-gray-400">
-                            {index}
-                        </span>
-                    </div>
+        <section className="py-16 bg-white text-gray-900 font-sans border-t border-gray-200 overflow-hidden">
 
-                    {/* Tech list */}
-                    <div className="lg:col-span-9">
-                        <ul className="flex flex-wrap gap-x-10 gap-y-4">
+            <div className="relative w-full">
+                {/* Fade edges */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-linear-to-r from-white to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-linear-to-l from-white to-transparent" />
+
+                <ScrollVelocityContainer>
+                    <ScrollVelocityRow
+                        baseVelocity={6}
+                        direction={1}
+                        pauseOnHover
+                        gap={48}
+                    >
+                        <div className="flex items-center gap-12">
                             {stack.map((tech, i) => (
-                                <li
+                                <span
                                     key={i}
-                                    className="text-base sm:text-lg font-medium text-black"
+                                    className="whitespace-nowrap text-2xl sm:text-3xl font-medium text-black flex items-center gap-12"
                                 >
                                     {tech}
-                                </li>
+                                    <span className="text-gray-300 text-lg select-none">·</span>
+                                </span>
                             ))}
-                        </ul>
-                    </div>
-                </div>
-            </Container>
+                        </div>
+                    </ScrollVelocityRow>
+                </ScrollVelocityContainer>
+            </div>
         </section>
     );
 }
