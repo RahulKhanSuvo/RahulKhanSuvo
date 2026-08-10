@@ -7,7 +7,6 @@ interface ProjectOverviewProps {
     year?: string;
     imageUrl?: string;
     liveLink?: string;
-    techStack?: string[];
 }
 
 export default function ProjectOverview({
@@ -16,7 +15,6 @@ export default function ProjectOverview({
     year = "2026",
     imageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
     liveLink = "#",
-    techStack = ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS", "Figma"],
 }: ProjectOverviewProps) {
     return (
         <section className='mt-28'>
@@ -71,25 +69,6 @@ export default function ProjectOverview({
                         <p className="text-sm font-medium text-black">{year}</p>
                     </div>
                 </div>
-
-                {/* Tech Stack Strip */}
-                {techStack && techStack.length > 0 && (
-                    <div className="mt-6 pt-5 border-t border-gray-200">
-                        <div className="flex flex-wrap items-center gap-2">
-                            <span className="text-xs uppercase tracking-wider text-gray-400 font-medium mr-2">
-                                Stack
-                            </span>
-                            {techStack.map((tech, i) => (
-                                <span
-                                    key={i}
-                                    className="font-mono text-xs text-gray-700 border border-gray-300 rounded-full px-3 py-1 hover:border-gray-600 hover:text-black transition-colors duration-150"
-                                >
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                )}
             </Container>
         </section>
     );
