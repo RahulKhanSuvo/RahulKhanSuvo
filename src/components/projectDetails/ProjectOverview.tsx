@@ -17,10 +17,10 @@ export default function ProjectOverview({
     imageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
 }: ProjectOverviewProps) {
     return (
-        <section >
+        <section className='mt-28'>
             <Container>
                 {/* Top Banner Image */}
-                <div className="relative w-full aspect-[2.4/1] overflow-hidden mb-6 bg-gray-100">
+                <div className="relative w-full aspect-[1.2/0.4] overflow-hidden mb-6 bg-gray-100">
                     <Image
                         src={imageUrl}
                         alt={`${client} project header`}

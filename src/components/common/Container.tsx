@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-const containerVariants = cva("mx-auto w-full px-4 sm:px-6 lg:px-18", {
+const containerVariants = cva("mx-auto w-full px-4 sm:px-6 lg:px-8", {
   variants: {
     size: {
       xs: "max-w-3xl",
@@ -21,8 +21,8 @@ const containerVariants = cva("mx-auto w-full px-4 sm:px-6 lg:px-18", {
 
 export interface ContainerProps
   extends
-    React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof containerVariants> {}
+  React.HTMLAttributes<HTMLDivElement>,
+  VariantProps<typeof containerVariants> { }
 
 function Container({ className, size, ...props }: ContainerProps) {
   return (

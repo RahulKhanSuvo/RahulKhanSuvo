@@ -4,11 +4,13 @@ import SolutionResultSection from '@/components/projectDetails/SolutionResultSec
 
 const WorkDetailPage = () => {
     return (
-        <div>
+        <>
             <ProjectOverview />
-            <CaseStudySections />
+            <div className='pt-48'>
+                <CaseStudySections />
+            </div>
             <SolutionResultSection />
-        </div>
+        </>
     );
 }
 
