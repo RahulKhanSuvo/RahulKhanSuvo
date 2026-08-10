@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "../common/Container";
 
 const Navbar = () => {
@@ -5,10 +6,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full pt-5 z-50">
       <Container className="flex justify-between items-center">
         {/* logo */}
-        <a href="#" className="flex flex-col font-bold font-heading text-[3rem] leading-none text-neutral-900">
+        <Link href="/" className="flex flex-col font-bold font-heading text-[3rem] leading-none text-neutral-900">
           <span>RAHUL</span>
           <span className="pl-5">KHAN</span>
-        </a>
+        </Link>
 
         {/* nav & resume button */}
         <div className="flex items-center gap-6">
