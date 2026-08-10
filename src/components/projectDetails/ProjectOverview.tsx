@@ -48,7 +48,7 @@ export default function ProjectOverview({
                         <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
                             Overview
                         </span>
-                        <p className="text-gray-900 leading-relaxed text-sm sm:text-base font-normal pr-2">
+                        <p className="text-gray-900 leading-relaxed text-lg md:text-xl lg:text-2xl font-normal pr-2">
                             {overview}
                         </p>
                     </div>

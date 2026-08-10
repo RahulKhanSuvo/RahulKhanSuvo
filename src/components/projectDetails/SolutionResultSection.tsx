@@ -21,7 +21,7 @@ export default function SolutionResultSection({
     resultHeading = "An identity that behaves like good gallery lighting. Present, functional, and completely unobtrusive.",
     bannerImageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
     bannerImageAlt = "Textured concrete wall with shadow detail",
-    sideImageUrl = "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80&w=1200",
+    sideImageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
     sideImageAlt = "Monolithic brutalist architecture with sharp shadows",
 }: SolutionResultProps) {
     return (
@@ -41,7 +41,7 @@ export default function SolutionResultSection({
                 {/* Bottom Content & Side Image Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                     {/* Left Column: Solution, Branding, and Result */}
-                    <div className="lg:col-span-7 flex flex-col justify-between space-y-16 lg:space-y-24 pt-2">
+                    <div className="lg:col-span-7 flex flex-col justify-between h-full pt-2">
                         {/* Solution Block */}
                         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
                             <span className="sm:col-span-4 text-xs font-mono uppercase text-gray-400 tracking-wider">
@@ -51,14 +51,6 @@ export default function SolutionResultSection({
                                 {solutionText}
                             </p>
                         </div>
-
-                        {/* Brand Logo / Accent Text */}
-                        <div>
-                            <h3 className="text-2xl font-bold tracking-tight text-black">
-                                {brandText}
-                            </h3>
-                        </div>
-
                         {/* Result Block */}
                         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-start">
                             <span className="sm:col-span-4 text-xs font-mono uppercase text-gray-400 tracking-wider">
@@ -72,7 +64,7 @@ export default function SolutionResultSection({
 
                     {/* Right Column: Tall Architectural Image */}
                     <div className="lg:col-span-5">
-                        <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
+                        <div className="relative aspect-[3/3.30] w-full overflow-hidden bg-gray-100">
                             <Image
                                 src={sideImageUrl}
                                 alt={sideImageAlt}
