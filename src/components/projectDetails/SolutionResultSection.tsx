@@ -64,7 +64,7 @@ export default function SolutionResultSection({
 
                     {/* Right Column: Tall Architectural Image */}
                     <div className="lg:col-span-5">
-                        <div className="relative aspect-[3/3.30] w-full overflow-hidden bg-gray-100">
+                        <div className="relative aspect-[3/3.50] w-full overflow-hidden bg-gray-100">
                             <Image
                                 src={sideImageUrl}
                                 alt={sideImageAlt}
