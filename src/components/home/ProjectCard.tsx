@@ -12,16 +12,13 @@ export const ProjectCard = ({
   gallery,
 }: Project) => {
   return (
-    <Link
-      href={`/project/${title}`}
-      className="group relative overflow-hidden"
-    >
+    <Link href={`/project/${title}`} className="group relative overflow-hidden">
       <Image
         src={image}
         alt={title}
-        className="w-full transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[2px]"
+        className="w-full transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[5px]"
       />
-      <div className="absolute inset-0 bg-white/60 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100" />
+      {/*<div className="absolute inset-0 bg-white/60 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100" />*/}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <SlideShow
           images={gallery}
@@ -32,10 +29,10 @@ export const ProjectCard = ({
       {/* title at top inside card */}
       <div className="absolute inset-x-0 top-0 flex items-start justify-between p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <div>
-          <h3 className="font-heading text-[2.5rem] uppercase leading-none tracking-tight">
+          <h3 className=" text-[2.5rem] text-white uppercase leading-none tracking-tight">
             {title}
           </h3>
-          <p className="mt-2 text-sm text-gray-600">
+          <p className="mt-2 text-sm text-white">
             {category} · {year}
           </p>
         </div>
