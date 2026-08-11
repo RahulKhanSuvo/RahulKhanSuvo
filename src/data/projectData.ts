@@ -1,9 +1,12 @@
-import projectImage from "@/assets/projects/69f7fd08edbaab7413a63440_jc-thumbnail.webp";
 import galleryImage1 from "@/assets/projects/1.webp";
 import galleryImage2 from "@/assets/projects/3.webp";
 import galleryImage3 from "@/assets/projects/4.webp";
 import { StaticImageData } from "next/image";
-
+import livomainImage from "@/assets/projects/livoMain1.png";
+import jobzillaImage from "@/assets/projects/jobzillMain1.png";
+import jobzillaGalleryMoble1 from "@/assets/projects/jobzilla/jobzillg1.png";
+import jobzillaGalleryMoble2 from "@/assets/projects/jobzilla/jobzillg2.png";
+import jobzillaDashboardImage from "@/assets/projects/jobzilla/dahboard2.png";
 interface CaseStudySection {
   index: string;
   title: string;
@@ -40,18 +43,18 @@ export const projectData: Project[] = [
     stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
     live: "https://jobzilla.example.com",
     github: "https://github.com/example/jobzilla",
-    image: projectImage,
+    image: jobzillaImage,
     gallery: [
       {
-        src: galleryImage1,
-        alt: "JobZilla dashboard",
+        src: jobzillaGalleryMoble1,
+        alt: "JobZilla  ",
       },
       {
-        src: galleryImage2,
+        src: jobzillaGalleryMoble2,
         alt: "JobZilla job listing",
       },
       {
-        src: galleryImage3,
+        src: jobzillaDashboardImage,
         alt: "JobZilla profile",
       },
     ],
@@ -89,7 +92,7 @@ export const projectData: Project[] = [
     stack: ["React", "Node.js", "WebRTC", "MongoDB", "Redis"],
     live: "https://livo.example.com",
     github: "https://github.com/example/livo",
-    image: projectImage,
+    image: livomainImage,
     gallery: [
       {
         src: galleryImage1,
