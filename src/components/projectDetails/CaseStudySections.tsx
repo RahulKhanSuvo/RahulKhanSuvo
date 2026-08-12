@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Container } from "../common/Container";
+import ParallaxImage from "../ui/ParallaxImage";
 
 interface SectionData {
   index: string;
@@ -48,15 +48,13 @@ export default function CaseStudySections({
                 {intro.description}
               </p>
             </div>
-
             <div className="lg:col-span-7">
               <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-100">
-                <Image
+                <ParallaxImage
                   src={intro.imageUrl}
                   alt={intro.imageAlt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  className="object-cover "
+                  speed={8}
+                  imgClassName="object-cover "
                 />
               </div>
             </div>
@@ -66,16 +64,14 @@ export default function CaseStudySections({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-5">
               <div className="relative aspect-4/5 w-full overflow-hidden bg-gray-100">
-                <Image
+                <ParallaxImage
                   src={challenge.imageUrl}
                   alt={challenge.imageAlt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  className="object-cover "
+                  speed={8}
+                  imgClassName="object-cover "
                 />
               </div>
             </div>
-
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-4">
               <span className="sm:col-span-4 text-base md:text-lg lg:text-xl font-mono uppercase text-gray-400 tracking-wider">
                 {challenge.index}
