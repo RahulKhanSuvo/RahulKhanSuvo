@@ -6,7 +6,7 @@ import livomainImage from "@/assets/projects/livoMain1.png";
 import jobzillaImage from "@/assets/projects/jobzillMain1.png";
 import jobzillaGalleryMoble1 from "@/assets/projects/jobzilla/jobzillg1.png";
 import jobzillaGalleryMoble2 from "@/assets/projects/jobzilla/jobzillg2.png";
-import jobzillaDashboardImage from "@/assets/projects/jobzilla/dahboard2.png";
+import jobzillaDashboardImage from "@/assets/projects/jobzilla/ChatGPT Image Aug 12, 2026, 07_42_29 PM.png";
 interface CaseStudySection {
   index: string;
   title: string;
