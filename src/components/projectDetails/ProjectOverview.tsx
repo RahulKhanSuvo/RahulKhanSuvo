@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Container } from "../common/Container";
+import ParallaxImage from "../ui/ParallaxImage";
 
 interface ProjectOverviewProps {
   client?: string;
@@ -19,15 +19,13 @@ export default function ProjectOverview({
   return (
     <section className="mt-28">
       <Container>
-        {/* Top Banner Image */}
-        <div className="relative w-full aspect-[1.2/0.4] overflow-hidden mb-6 bg-gray-100">
-          <Image
+        {/* Top Banner Image with parallax */}
+        <div className="relative w-full aspect-[1.2/0.5] overflow-hidden mb-6 bg-gray-100">
+          <ParallaxImage
             src={imageUrl}
             alt={`${client} project header`}
-            fill
             priority
-            sizes="(max-width: 1280px) 100vw, 1280px"
-            className="object-cover "
+            imgClassName="object-cover"
           />
         </div>
 
