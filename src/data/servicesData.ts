@@ -57,9 +57,9 @@ export const servicesData: Service[] = [
     id: "api-system-architecture",
     title: "API & SYSTEM ARCHITECTURE",
     description:
-      "Resilient REST & GraphQL APIs, microservices, database schemas, and cloud deployment pipelines optimized for reliability, speed, and scale.",
+      "Resilient REST APIs, microservices, database schemas, and cloud deployment pipelines optimized for reliability, speed, and scale.",
     tags: [
-      "REST & GRAPHQL APIS",
+      "REST",
       "SYSTEM DESIGN",
       "DATABASE SCHEMAS",
       "CI/CD & CLOUD DEPLOYMENT",

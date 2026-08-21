@@ -40,7 +40,7 @@ export const ServicesSection = ({
         {/* Section Tag */}
         <div className="w-full border-t border-neutral-200 pt-6 pb-16 sm:pb-20">
           <span className="text-xs sm:text-sm font-mono text-neutral-400 tracking-wider">
-            (SERVICES)
+            (What I Do)
           </span>
         </div>
 
