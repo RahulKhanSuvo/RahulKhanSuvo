@@ -6,8 +6,13 @@ import galleryImage3 from "@/assets/projects/4.webp";
 import jobzillaDashboardImage from "@/assets/projects/jobzilla/ChatGPT Image Aug 12, 2026, 07_42_29 PM.png";
 import jobzillaGalleryMoble1 from "@/assets/projects/jobzilla/jobzillg1.png";
 import jobzillaGalleryMoble2 from "@/assets/projects/jobzilla/jobzillg2.png";
-import jobzillamainImage from "@/assets/projects/jobzillMain1.png";
-import livomainImage from "@/assets/projects/livoMain1.png";
+import jobzillamainImage from "@/assets/projects/jobzilla/jobzillgMain.png.png";
+import livomainImage from "@/assets/projects/livo/main4.png";
+import livomainHero from "@/assets/projects/livo/livo_home.png";
+import livoProductPage from "@/assets/projects/livo/livoProductPage.png";
+import livoDashboard from "@/assets/projects/livo/livoDashboard.png";
+import livoCatalog from "@/assets/projects/livo/livoDashbaordCatalog.png";
+import liveProductSider from "@/assets/projects/livo/livoSlider.png";
 
 interface CaseStudySection {
   index: string;
@@ -42,7 +47,7 @@ export interface Project {
 export const projectData: Project[] = [
   {
     title: "Livo",
-    category: "Streaming",
+    category: "E-commerce",
     year: "2024",
     isFeatured: false,
     aspect: "hero",
@@ -53,9 +58,11 @@ export const projectData: Project[] = [
     github: "https://github.com/example/livo",
     image: livomainImage,
     gallery: [
-      { src: galleryImage1, alt: "Livo stream room" },
-      { src: galleryImage2, alt: "Livo chat interface" },
-      { src: galleryImage3, alt: "Livo analytics dashboard" },
+      { src: livomainHero, alt: "Livo homepage" },
+      { src: livoProductPage, alt: "Livo product page" },
+      { src: livoDashboard, alt: "Livo analytics dashboard" },
+      { src: livoCatalog, alt: "Livo catalog" },
+      { src: liveProductSider, alt: "Livo product slider" },
     ],
     caseStudy: {
       intro: {
