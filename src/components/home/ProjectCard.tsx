@@ -1,7 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import { Project } from "../../data/projectData";
 import SlideShow from "./SlideShow";
-import Link from "next/link";
+
+const aspectClasses = {
+  hero: "col-span-2 aspect-[16/7.5]",
+  tall: "col-span-1 aspect-[1/1.5]",
+  wide: "col-span-1 aspect-[2/1]",
+} as const;
 
 export const ProjectCard = ({
   title,
@@ -10,15 +17,22 @@ export const ProjectCard = ({
   stack,
   image,
   gallery,
+  aspect,
 }: Project) => {
   return (
-    <Link href={`/project/${title}`} className="group relative overflow-hidden">
+    <Link
+      href={`/project/${title}`}
+      className={`group relative block w-full overflow-hidden ${aspectClasses[aspect]}`}
+    >
       <Image
         src={image}
         alt={title}
-        className="w-full transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[5px]"
+        fill
+        sizes="100vw"
+        className="object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[5px]"
       />
-      {/*<div className="absolute inset-0 bg-white/60 opacity-0 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-100" />*/}
+
+      {/* Slideshow */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <SlideShow
           images={gallery}
@@ -26,19 +40,20 @@ export const ProjectCard = ({
         />
       </div>
 
-      {/* title at top inside card */}
+      {/* Title */}
       <div className="absolute inset-x-0 top-0 flex items-start justify-between p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         <div>
-          <h3 className=" text-[2.5rem] text-white uppercase leading-none tracking-tight">
+          <h3 className="text-[2.5rem] uppercase leading-none tracking-tight text-white">
             {title}
           </h3>
+
           <p className="mt-2 text-sm text-white">
             {category} · {year}
           </p>
         </div>
       </div>
 
-      {/* stack at bottom */}
+      {/* Stack */}
       <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
         {stack.map((tech) => (
           <span
