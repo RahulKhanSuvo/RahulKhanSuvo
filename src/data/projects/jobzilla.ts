@@ -9,7 +9,7 @@ export const jobzilla: Project = {
   title: "JobZilla",
   category: "Web Platform",
   year: "2025",
-  aspect: "tall",
+  aspect: "hero",
   isFeatured: true,
   description:
     "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
