@@ -53,8 +53,8 @@ export default function CaseStudySections({
                 <ParallaxImage
                   src={intro.imageUrl}
                   alt={intro.imageAlt}
-                  speed={8}
-                  imgClassName="object-cover "
+                  speed={10}
+                  imgClassName="object-cover"
                 />
               </div>
             </div>
@@ -67,8 +67,8 @@ export default function CaseStudySections({
                 <ParallaxImage
                   src={challenge.imageUrl}
                   alt={challenge.imageAlt}
-                  speed={8}
-                  imgClassName="object-cover "
+                  speed={10}
+                  imgClassName="object-cover"
                 />
               </div>
             </div>

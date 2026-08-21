@@ -25,6 +25,7 @@ export default function ProjectOverview({
             src={imageUrl}
             alt={`${client} project header`}
             priority
+            speed={30}
             imgClassName="object-cover"
           />
         </div>

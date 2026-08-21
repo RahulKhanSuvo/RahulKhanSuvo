@@ -1,12 +1,14 @@
+import { StaticImageData } from "next/image";
+
 import galleryImage1 from "@/assets/projects/1.webp";
 import galleryImage2 from "@/assets/projects/3.webp";
 import galleryImage3 from "@/assets/projects/4.webp";
-import { StaticImageData } from "next/image";
-import livomainImage from "@/assets/projects/livoMain1.png";
-import jobzillaImage from "@/assets/projects/jobzillMain1.png";
+import jobzillaDashboardImage from "@/assets/projects/jobzilla/ChatGPT Image Aug 12, 2026, 07_42_29 PM.png";
 import jobzillaGalleryMoble1 from "@/assets/projects/jobzilla/jobzillg1.png";
 import jobzillaGalleryMoble2 from "@/assets/projects/jobzilla/jobzillg2.png";
-import jobzillaDashboardImage from "@/assets/projects/jobzilla/ChatGPT Image Aug 12, 2026, 07_42_29 PM.png";
+import jobzillamainImage from "@/assets/projects/jobzillMain1.png";
+import livomainImage from "@/assets/projects/livoMain1.png";
+
 interface CaseStudySection {
   index: string;
   title: string;
@@ -21,6 +23,7 @@ export interface Project {
   stack: string[];
   live: string;
   github: string;
+  isFeatured?: boolean;
   image: StaticImageData;
   gallery: {
     src: StaticImageData;
@@ -33,30 +36,23 @@ export interface Project {
     result: { index: string; heading: string };
   };
 }
+
 export const projectData: Project[] = [
   {
     title: "JobZilla",
     category: "Web Platform",
     year: "2025",
+    isFeatured: true,
     description:
       "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
     stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
     live: "https://jobzilla.example.com",
     github: "https://github.com/example/jobzilla",
-    image: jobzillaImage,
+    image: jobzillamainImage,
     gallery: [
-      {
-        src: jobzillaGalleryMoble1,
-        alt: "JobZilla  ",
-      },
-      {
-        src: jobzillaGalleryMoble2,
-        alt: "JobZilla job listing",
-      },
-      {
-        src: jobzillaDashboardImage,
-        alt: "JobZilla profile",
-      },
+      { src: jobzillaGalleryMoble1, alt: "JobZilla Mobile View" },
+      { src: jobzillaGalleryMoble2, alt: "JobZilla Job Listing" },
+      { src: jobzillaDashboardImage, alt: "JobZilla Recruiter Dashboard" },
     ],
     caseStudy: {
       intro: {
@@ -84,51 +80,202 @@ export const projectData: Project[] = [
     },
   },
   {
+    title: "Kivra Architecture",
+    category: "Architecture Studio",
+    year: "2025",
+    isFeatured: false,
+    description:
+      "Website for architecture studio whose bold vision demands attention.",
+    stack: ["Next.js", "Three.js", "Tailwind CSS"],
+    live: "https://kivra.example.com",
+    github: "https://github.com/example/kivra",
+    image: jobzillaGalleryMoble1,
+    gallery: [
+      { src: jobzillaGalleryMoble1, alt: "Kivra Mobile Experience" },
+      { src: galleryImage1, alt: "Kivra Portfolio View" },
+    ],
+    caseStudy: {
+      intro: {
+        index: "01 — INTRO",
+        title: "Kivra Architecture",
+        description:
+          "High-end architectural firms require web presence that reflects spatial elegance, precise typography, and tactile visuals.",
+      },
+      challenge: {
+        index: "02 — CHALLENGE",
+        title: "Challenge",
+        description:
+          "Preserving fast page load speeds while loading uncompressed, ultra-high-resolution architectural renderings and interactive WebGL elements.",
+      },
+      solution: {
+        index: "03 — SOLUTION",
+        text: "Custom WebGL shader pipelines paired with aggressive progressive image loading and smooth scroll physics.",
+        brand: "KIVRA®",
+      },
+      result: {
+        index: "04 — RESULT",
+        heading:
+          "An award-winning interactive portfolio that led to a 40% increase in high-ticket client inquiries.",
+      },
+    },
+  },
+  {
+    title: "Collection V.2",
+    category: "Design Concept",
+    year: "2025",
+    isFeatured: false,
+    description:
+      "A slick showcase of past projects and fresh concepts combined.",
+    stack: ["React", "Framer Motion", "CSS Modules"],
+    live: "https://collectionv2.example.com",
+    github: "https://github.com/example/collectionv2",
+    image: jobzillaDashboardImage,
+    gallery: [
+      { src: jobzillaDashboardImage, alt: "Collection V2 Overview" },
+      { src: galleryImage2, alt: "Concept Layout" },
+    ],
+    caseStudy: {
+      intro: {
+        index: "01 — INTRO",
+        title: "Collection V.2",
+        description:
+          "An experimental playground exploring non-traditional grid structures and dynamic typography for modern digital visual archives.",
+      },
+      challenge: {
+        index: "02 — CHALLENGE",
+        title: "Challenge",
+        description:
+          "Creating fluid user interactions without compromising access control or responsive behavior across mobile devices.",
+      },
+      solution: {
+        index: "03 — SOLUTION",
+        text: "A modular, layout-independent component architecture powered by Spring animations.",
+        brand: "COLLECTION®",
+      },
+      result: {
+        index: "04 — RESULT",
+        heading:
+          "A high-performing visual library utilized internally for rapid design prototyping.",
+      },
+    },
+  },
+  {
     title: "Livo",
     category: "Streaming",
     year: "2024",
+    isFeatured: false,
     description:
-      "A real-time live streaming platform for creators, featuring low-latency video, chat, monetization, and an analytics suite for channel growth.",
+      "A real-time live streaming platform for creators, featuring low-latency video, chat, monetization, and an analytics suite.",
     stack: ["React", "Node.js", "WebRTC", "MongoDB", "Redis"],
     live: "https://livo.example.com",
     github: "https://github.com/example/livo",
     image: livomainImage,
     gallery: [
-      {
-        src: galleryImage1,
-        alt: "Livo stream room",
-      },
-      {
-        src: galleryImage2,
-        alt: "Livo chat",
-      },
-      {
-        src: galleryImage3,
-        alt: "Livo analytics",
-      },
+      { src: galleryImage1, alt: "Livo stream room" },
+      { src: galleryImage2, alt: "Livo chat interface" },
+      { src: galleryImage3, alt: "Livo analytics dashboard" },
     ],
     caseStudy: {
       intro: {
         index: "01 — INTRO",
         title: "Livo Project",
         description:
-          "Live streaming is dominated by platforms that treat creators as an afterthought. Livo is a creator-first streaming platform where latency, chat, and monetization are first-class citizens.",
+          "Live streaming is dominated by platforms that treat creators as an afterthought. Livo is a creator-first platform where latency and chat are first-class citizens.",
       },
       challenge: {
         index: "02 — CHALLENGE",
         title: "Challenge",
         description:
-          "Delivering sub-second stream latency at scale while keeping chat reliable under thousands of concurrent viewers, and giving creators tools to monetize without leaving the platform.",
+          "Delivering sub-second stream latency at scale while keeping chat reliable under thousands of concurrent viewers.",
       },
       solution: {
         index: "03 — SOLUTION",
-        text: "A WebRTC-based ingestion pipeline for low-latency broadcast, a Redis-backed chat layer that scales horizontally, and integrated tips, subscriptions, and analytics so creators understand and grow their audience.",
+        text: "A WebRTC-based ingestion pipeline for low-latency broadcast paired with a Redis-backed chat layer.",
         brand: "LIVO®",
       },
       result: {
         index: "04 — RESULT",
         heading:
-          "A streaming platform that puts the creator first — fast, reliable, and with every tool needed to build a community and a business.",
+          "A streaming platform that puts the creator first with every tool needed to grow a community.",
+      },
+    },
+  },
+  {
+    title: "Shovk Studio",
+    category: "Minimal Web",
+    year: "2024",
+    isFeatured: false,
+    description:
+      "Website concept maximizing impact through minimal modern form.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    live: "https://shovk.example.com",
+    github: "https://github.com/example/shovk",
+    image: galleryImage3,
+    gallery: [
+      { src: galleryImage3, alt: "Shovk Landing" },
+      { src: galleryImage1, alt: "Shovk Gallery Detail" },
+    ],
+    caseStudy: {
+      intro: {
+        index: "01 — INTRO",
+        title: "Shovk Studio",
+        description:
+          "Stripping away visual noise to highlight raw imagery and architectural forms through high contrast layout design.",
+      },
+      challenge: {
+        index: "02 — CHALLENGE",
+        title: "Challenge",
+        description:
+          "Maintaining user engagement on minimal web layouts without relying on standard navigational widgets.",
+      },
+      solution: {
+        index: "03 — SOLUTION",
+        text: "Full-screen gesture controls paired with strict grid typography alignments.",
+        brand: "SHOVK®",
+      },
+      result: {
+        index: "04 — RESULT",
+        heading:
+          "Featured across top design galleries and digital archive websites globally.",
+      },
+    },
+  },
+  {
+    title: "Collection V.1",
+    category: "Archive",
+    year: "2023",
+    isFeatured: false,
+    description: "A focused collection of earlier work and concepts over time.",
+    stack: ["Vue.js", "Nuxt", "Sass"],
+    live: "https://collectionv1.example.com",
+    github: "https://github.com/example/collectionv1",
+    image: jobzillaGalleryMoble2,
+    gallery: [
+      { src: jobzillaGalleryMoble2, alt: "Collection V1 Grid" },
+      { src: galleryImage2, alt: "Archive View" },
+    ],
+    caseStudy: {
+      intro: {
+        index: "01 — INTRO",
+        title: "Collection V.1",
+        description:
+          "The foundational design portfolio establishing early experiments with black-and-white grid layouts.",
+      },
+      challenge: {
+        index: "02 — CHALLENGE",
+        title: "Challenge",
+        description:
+          "Organizing disparate case studies with varying aspect ratios into a single cohesive reading experience.",
+      },
+      solution: {
+        index: "03 — SOLUTION",
+        text: "Custom dynamic masonry layout algorithms with unified image treatment filters.",
+        brand: "ARCHIVE®",
+      },
+      result: {
+        index: "04 — RESULT",
+        heading:
+          "Successfully preserved earlier design milestones in an interactive format.",
       },
     },
   },
