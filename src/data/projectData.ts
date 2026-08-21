@@ -41,10 +41,52 @@ export interface Project {
 
 export const projectData: Project[] = [
   {
+    title: "Livo",
+    category: "Streaming",
+    year: "2024",
+    isFeatured: false,
+    aspect: "hero",
+    description:
+      "A real-time live streaming platform for creators, featuring low-latency video, chat, monetization, and an analytics suite.",
+    stack: ["React", "Next.js", "Node.js", "SQL", "PostgreSQL"],
+    live: "https://livo.example.com",
+    github: "https://github.com/example/livo",
+    image: livomainImage,
+    gallery: [
+      { src: galleryImage1, alt: "Livo stream room" },
+      { src: galleryImage2, alt: "Livo chat interface" },
+      { src: galleryImage3, alt: "Livo analytics dashboard" },
+    ],
+    caseStudy: {
+      intro: {
+        index: "01 — INTRO",
+        title: "Livo Project",
+        description:
+          "Live streaming is dominated by platforms that treat creators as an afterthought. Livo is a creator-first platform where latency and chat are first-class citizens.",
+      },
+      challenge: {
+        index: "02 — CHALLENGE",
+        title: "Challenge",
+        description:
+          "Delivering sub-second stream latency at scale while keeping chat reliable under thousands of concurrent viewers.",
+      },
+      solution: {
+        index: "03 — SOLUTION",
+        text: "A WebRTC-based ingestion pipeline for low-latency broadcast paired with a Redis-backed chat layer.",
+        brand: "LIVO®",
+      },
+      result: {
+        index: "04 — RESULT",
+        heading:
+          "A streaming platform that puts the creator first with every tool needed to grow a community.",
+      },
+    },
+  },
+  {
     title: "JobZilla",
     category: "Web Platform",
     year: "2025",
-    aspect: "hero",
+    aspect: "tall",
     isFeatured: true,
     description:
       "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
@@ -87,7 +129,7 @@ export const projectData: Project[] = [
     category: "Architecture Studio",
     year: "2025",
     isFeatured: false,
-    aspect: "tall",
+    aspect: "wide",
     description:
       "Website for architecture studio whose bold vision demands attention.",
     stack: ["Next.js", "Three.js", "Tailwind CSS"],
@@ -161,48 +203,6 @@ export const projectData: Project[] = [
         index: "04 — RESULT",
         heading:
           "A high-performing visual library utilized internally for rapid design prototyping.",
-      },
-    },
-  },
-  {
-    title: "Livo",
-    category: "Streaming",
-    year: "2024",
-    isFeatured: false,
-    aspect: "wide",
-    description:
-      "A real-time live streaming platform for creators, featuring low-latency video, chat, monetization, and an analytics suite.",
-    stack: ["React", "Node.js", "WebRTC", "MongoDB", "Redis"],
-    live: "https://livo.example.com",
-    github: "https://github.com/example/livo",
-    image: livomainImage,
-    gallery: [
-      { src: galleryImage1, alt: "Livo stream room" },
-      { src: galleryImage2, alt: "Livo chat interface" },
-      { src: galleryImage3, alt: "Livo analytics dashboard" },
-    ],
-    caseStudy: {
-      intro: {
-        index: "01 — INTRO",
-        title: "Livo Project",
-        description:
-          "Live streaming is dominated by platforms that treat creators as an afterthought. Livo is a creator-first platform where latency and chat are first-class citizens.",
-      },
-      challenge: {
-        index: "02 — CHALLENGE",
-        title: "Challenge",
-        description:
-          "Delivering sub-second stream latency at scale while keeping chat reliable under thousands of concurrent viewers.",
-      },
-      solution: {
-        index: "03 — SOLUTION",
-        text: "A WebRTC-based ingestion pipeline for low-latency broadcast paired with a Redis-backed chat layer.",
-        brand: "LIVO®",
-      },
-      result: {
-        index: "04 — RESULT",
-        heading:
-          "A streaming platform that puts the creator first with every tool needed to grow a community.",
       },
     },
   },
