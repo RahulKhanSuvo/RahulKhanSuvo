@@ -6,7 +6,7 @@ import SlideShow from "./SlideShow";
 
 const aspectClasses = {
   hero: "col-span-2 aspect-[16/7.5]",
-  tall: "col-span-1 aspect-[1/1.5]",
+  tall: "col-span-1 aspect-[16/4]",
   wide: "col-span-1 aspect-[2/1]",
 } as const;
 

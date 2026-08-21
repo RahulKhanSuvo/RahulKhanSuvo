@@ -14,11 +14,13 @@ interface CaseStudySection {
   title: string;
   description: string;
 }
-
+type ProjectAspect = "hero" | "tall" | "wide";
 export interface Project {
+  id?: number;
   title: string;
   category: string;
   year: string;
+  aspect: ProjectAspect;
   description: string;
   stack: string[];
   live: string;
@@ -42,6 +44,7 @@ export const projectData: Project[] = [
     title: "JobZilla",
     category: "Web Platform",
     year: "2025",
+    aspect: "hero",
     isFeatured: true,
     description:
       "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
@@ -84,6 +87,7 @@ export const projectData: Project[] = [
     category: "Architecture Studio",
     year: "2025",
     isFeatured: false,
+    aspect: "tall",
     description:
       "Website for architecture studio whose bold vision demands attention.",
     stack: ["Next.js", "Three.js", "Tailwind CSS"],
@@ -122,6 +126,7 @@ export const projectData: Project[] = [
   {
     title: "Collection V.2",
     category: "Design Concept",
+    aspect: "wide",
     year: "2025",
     isFeatured: false,
     description:
@@ -164,6 +169,7 @@ export const projectData: Project[] = [
     category: "Streaming",
     year: "2024",
     isFeatured: false,
+    aspect: "wide",
     description:
       "A real-time live streaming platform for creators, featuring low-latency video, chat, monetization, and an analytics suite.",
     stack: ["React", "Node.js", "WebRTC", "MongoDB", "Redis"],
@@ -204,6 +210,7 @@ export const projectData: Project[] = [
     title: "Shovk Studio",
     category: "Minimal Web",
     year: "2024",
+    aspect: "tall",
     isFeatured: false,
     description:
       "Website concept maximizing impact through minimal modern form.",
@@ -237,45 +244,6 @@ export const projectData: Project[] = [
         index: "04 — RESULT",
         heading:
           "Featured across top design galleries and digital archive websites globally.",
-      },
-    },
-  },
-  {
-    title: "Collection V.1",
-    category: "Archive",
-    year: "2023",
-    isFeatured: false,
-    description: "A focused collection of earlier work and concepts over time.",
-    stack: ["Vue.js", "Nuxt", "Sass"],
-    live: "https://collectionv1.example.com",
-    github: "https://github.com/example/collectionv1",
-    image: jobzillaGalleryMoble2,
-    gallery: [
-      { src: jobzillaGalleryMoble2, alt: "Collection V1 Grid" },
-      { src: galleryImage2, alt: "Archive View" },
-    ],
-    caseStudy: {
-      intro: {
-        index: "01 — INTRO",
-        title: "Collection V.1",
-        description:
-          "The foundational design portfolio establishing early experiments with black-and-white grid layouts.",
-      },
-      challenge: {
-        index: "02 — CHALLENGE",
-        title: "Challenge",
-        description:
-          "Organizing disparate case studies with varying aspect ratios into a single cohesive reading experience.",
-      },
-      solution: {
-        index: "03 — SOLUTION",
-        text: "Custom dynamic masonry layout algorithms with unified image treatment filters.",
-        brand: "ARCHIVE®",
-      },
-      result: {
-        index: "04 — RESULT",
-        heading:
-          "Successfully preserved earlier design milestones in an interactive format.",
       },
     },
   },
