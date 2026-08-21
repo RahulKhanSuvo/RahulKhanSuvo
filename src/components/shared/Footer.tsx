@@ -72,12 +72,12 @@ export const Footer = () => {
         {/* Bottom Bar / Copyright */}
         <div className="mt-20 sm:mt-28 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center gap-6 text-[0.7rem] sm:text-xs font-mono text-neutral-500 uppercase tracking-widest">
           {/* Copyright */}
-          <div>©{new Date().getFullYear()} RAHUL KHAN</div>
+          <div>©{new Date().getFullYear()} RAHUL KHAN SUVO</div>
 
           {/* Social Links */}
           <div className="flex items-center gap-6 sm:gap-8">
             <a
-              href="https://github.com"
+              href="https://github.com/RahulKhanSuvo"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors duration-200"
@@ -85,7 +85,7 @@ export const Footer = () => {
               GITHUB
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rahul-khan-suvo"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors duration-200"
@@ -93,7 +93,7 @@ export const Footer = () => {
               LINKEDIN
             </a>
             <a
-              href="https://whatsapp.com"
+              href="https://wa.me/8801609553810"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors duration-200"
