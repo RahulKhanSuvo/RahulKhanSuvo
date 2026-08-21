@@ -67,11 +67,11 @@ export const ProjectCard = ({
           <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
             <SlideShow
               images={gallery}
-              className={`scale-[0.45] aspect-video w-3/5 transition-transform duration-500 ease-out group-hover:scale-100 ${
+              className={`scale-[0.45] w-3/5 transition-transform duration-500 ease-out group-hover:scale-100 ${
                 aspect === "hero"
                   ? "aspect-video"
                   : aspect === "tall"
-                    ? "aspect-6/4"
+                    ? "aspect-video"
                     : "aspect-4/2"
               }`}
             />
