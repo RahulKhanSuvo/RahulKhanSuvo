@@ -73,7 +73,7 @@ export const ProjectCard = ({
           </div>
 
           {/* Stack */}
-          <div className="absolute bottom-2.5 right-0 z-30 flex max-w-full flex-wrap justify-end gap-2 overflow-hidden px-2.5 pt-3">
+          <div className="absolute bottom-1 right-0 z-30 flex max-w-full flex-wrap justify-end gap-2 overflow-hidden px-3 py-3">
             {stack.map((tech, index) => (
               <motion.span
                 key={tech}
