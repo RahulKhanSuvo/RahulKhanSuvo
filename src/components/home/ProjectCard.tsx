@@ -71,7 +71,7 @@ export const ProjectCard = ({
                 aspect === "hero"
                   ? "aspect-video"
                   : aspect === "tall"
-                    ? "aspect-4/3"
+                    ? "aspect-6/4"
                     : "aspect-4/2"
               }`}
             />
