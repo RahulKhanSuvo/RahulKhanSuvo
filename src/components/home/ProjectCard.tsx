@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, type Variants } from "motion/react";
 
 import { Project } from "../../data/projectData";
 import SlideShow from "./SlideShow";
@@ -9,6 +11,23 @@ const aspectClasses = {
   tall: "col-span-1 aspect-[16/15]",
   wide: "col-span-1 aspect-[4/2.2]",
 } as const;
+
+const stackVariants: Variants = {
+  hidden: {
+    y: 80,
+  },
+
+  visible: (index: number) => ({
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 18,
+      mass: 0.7,
+      delay: index * 0.06,
+    },
+  }),
+};
 
 export const ProjectCard = ({
   title,
@@ -20,45 +39,50 @@ export const ProjectCard = ({
   aspect,
 }: Project) => {
   return (
-    <Link
-      href={`/project/${title}`}
-      className={`group relative block w-full ${aspectClasses[aspect]}`}
+    <motion.div
+      initial="hidden"
+      whileHover="visible"
+      className={`group relative w-full ${aspectClasses[aspect]}`}
     >
-      {/* Image */}
-      <div className="relative h-full w-full overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          sizes="100vw"
-          className="object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[5px]"
-        />
-
-        {/* Black Overlay */}
-        <div className="absolute inset-0 z-10 bg-linear-to-t from-black via-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-        {/* Slideshow */}
-        <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          <SlideShow
-            images={gallery}
-            className="scale-[0.45] transition-transform duration-500 ease-out group-hover:scale-100"
+      <Link href={`/project/${title}`} className="block h-full w-full">
+        {/* Image */}
+        <div className="relative h-full w-full overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="100vw"
+            className="object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[5px]"
           />
-        </div>
 
-        {/* Stack */}
-        <div className="absolute bottom-0 right-0 z-30 flex flex-wrap justify-end gap-2 p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-          {stack.map((tech) => (
-            <span
-              key={tech}
-              className="rounded border border-white px-3 py-1 text-lg uppercase text-white backdrop-blur-sm"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
+          {/* Black Gradient */}
+          <div className="absolute inset-0 z-10 bg-linear-to-t from-black via-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-      {/* Text outside image */}
+          {/* Slideshow */}
+          <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <SlideShow
+              images={gallery}
+              className="scale-[0.45] transition-transform duration-500 ease-out group-hover:scale-100"
+            />
+          </div>
+
+          {/* Stack */}
+          <div className="absolute bottom-2.5 right-0 z-30 flex max-w-full flex-wrap justify-end gap-2 overflow-hidden px-2.5">
+            {stack.map((tech, index) => (
+              <motion.span
+                key={tech}
+                custom={index}
+                variants={stackVariants}
+                className="rounded border border-white px-3 py-1 text-lg uppercase text-white backdrop-blur-sm"
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </div>
+        </div>
+      </Link>
+
+      {/* Text */}
       <div className="mt-4 flex items-start justify-between">
         <h3 className="text-4xl font-bold uppercase text-black">{title}</h3>
 
@@ -66,6 +90,6 @@ export const ProjectCard = ({
           {category} · {year}
         </p>
       </div>
-    </Link>
+    </motion.div>
   );
 };
