@@ -28,7 +28,7 @@ function SlideShow({ images, className }: SlideShowProps) {
       loop
       speed={100}
       autoplay={{
-        delay: 200,
+        delay: 600,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       }}
@@ -43,7 +43,7 @@ function SlideShow({ images, className }: SlideShowProps) {
               alt={image.alt}
               fill
               priority={index === 0}
-              className="object-cover"
+              className="object-fill"
             />
           </div>
         </SwiperSlide>
