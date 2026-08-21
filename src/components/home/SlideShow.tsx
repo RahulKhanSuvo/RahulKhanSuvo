@@ -33,7 +33,7 @@ function SlideShow({ images, className }: SlideShowProps) {
         pauseOnMouseEnter: false,
       }}
       allowTouchMove={false}
-      className={cn("h-75 w-3/5", className)}
+      className={cn(className)}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>
