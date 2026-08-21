@@ -24,6 +24,7 @@ export const ProjectCard = ({
       href={`/project/${title}`}
       className={`group relative block w-full ${aspectClasses[aspect]}`}
     >
+      {/* Image */}
       <div className="relative h-full w-full overflow-hidden">
         <Image
           src={image}
@@ -33,8 +34,11 @@ export const ProjectCard = ({
           className="object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:blur-[5px]"
         />
 
+        {/* Black Overlay */}
+        <div className="absolute inset-0 z-10 bg-linear-to-t from-black via-black/50 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
         {/* Slideshow */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
           <SlideShow
             images={gallery}
             className="scale-[0.45] transition-transform duration-500 ease-out group-hover:scale-100"
@@ -42,7 +46,7 @@ export const ProjectCard = ({
         </div>
 
         {/* Stack */}
-        <div className="absolute bottom-0 right-0 flex flex-wrap gap-2 p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+        <div className="absolute bottom-0 right-0 z-30 flex flex-wrap justify-end gap-2 p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
           {stack.map((tech) => (
             <span
               key={tech}
@@ -55,10 +59,8 @@ export const ProjectCard = ({
       </div>
 
       {/* Text outside image */}
-      <div className="mt-4 flex  justify-between">
-        <h3 className="text-4xl uppercase leading-none tracking-tight font-black text-black">
-          {title}
-        </h3>
+      <div className="mt-4 flex items-start justify-between">
+        <h3 className="text-4xl font-bold uppercase text-black">{title}</h3>
 
         <p className="mt-2 text-sm text-black">
           {category} · {year}
