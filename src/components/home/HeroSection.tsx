@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import heroImage from "@/assets/images/ChatGPT Image Aug 7, 2026, 10_16_19 AM-photoaidcom-greyscale.png";
+import heroImage from "@/assets/images/suvo.png";
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
