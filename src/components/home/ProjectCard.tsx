@@ -1,10 +1,13 @@
 "use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, type Variants } from "motion/react";
 
 import { Project } from "../../data/projectData";
 import SlideShow from "./SlideShow";
+import AnimatedTitle from "../animation/AnimatedTitle";
 
 const aspectClasses = {
   hero: "col-span-2 aspect-[16/8]",
@@ -16,7 +19,6 @@ const stackVariants: Variants = {
   hidden: {
     y: 80,
   },
-
   visible: (index: number) => ({
     y: 0,
     transition: {
@@ -38,10 +40,14 @@ export const ProjectCard = ({
   gallery,
   aspect,
 }: Project) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div
       initial="hidden"
-      whileHover="visible"
+      animate={isHovered ? "visible" : "hidden"}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
       className={`group relative w-full ${aspectClasses[aspect]}`}
     >
       <Link href={`/project/${title}`} className="block h-full w-full">
@@ -84,7 +90,11 @@ export const ProjectCard = ({
 
       {/* Text */}
       <div className="mt-4 flex items-start justify-between">
-        <h3 className="text-4xl font-bold uppercase text-black">{title}</h3>
+        <AnimatedTitle
+          title={title}
+          isHovered={isHovered}
+          className="text-4xl font-bold uppercase text-black"
+        />
 
         <p className="mt-2 text-sm text-black">
           {category} · {year}
