@@ -6,7 +6,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full pt-5 z-50">
       <Container className="flex justify-between items-center">
         {/* logo */}
-        <Link href="/" className="flex flex-col font-bold font-heading text-[3rem] leading-none text-neutral-900">
+        <Link
+          href="/"
+          className="flex flex-col font-bold font-heading text-[3rem] leading-none text-neutral-900"
+        >
           <span>RAHUL</span>
           <span className="pl-5">KHAN</span>
         </Link>
@@ -34,7 +37,7 @@ const Navbar = () => {
             download="Rahul_Khan_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-900 bg-neutral-900 text-white text-xs font-mono tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-neutral-900 shadow-sm group cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded border border-neutral-900 bg-neutral-900 text-white text-xs font-mono tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-neutral-900 shadow-sm group cursor-pointer"
           >
             <span>RESUME</span>
             <span className="inline-block transition-transform duration-300 group-hover:translate-y-0.5">
