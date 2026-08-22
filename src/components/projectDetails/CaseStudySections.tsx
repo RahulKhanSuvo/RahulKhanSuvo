@@ -33,10 +33,10 @@ export default function CaseStudySections({
   return (
     <section className="pb-6 bg-white text-gray-900">
       <Container>
-        <div>
+        <div className="flex flex-col gap-10 md:gap-6">
           {/* Row 1: Intro Section (Text Left, Image Right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-5 flex flex-col md:flex-row gap-4 items-start justify-between">
+          <div className="flex flex-col-reverse md:grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:items-start">
+            <div className="lg:col-span-5 flex flex-col md:flex-row gap-2 md:gap-4 items-start justify-between">
               <span className="text-base md:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
@@ -54,7 +54,7 @@ export default function CaseStudySections({
           </div>
 
           {/* Row 2: Challenge Section (Image Left, Text Right) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="flex flex-col md:grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:items-end">
             <div className="lg:col-span-5">
               <MotionImage
                 src={challenge.imageUrl}
