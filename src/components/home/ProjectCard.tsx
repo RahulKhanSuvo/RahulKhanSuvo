@@ -98,7 +98,7 @@ export const ProjectCard = ({
         <AnimatedTitle
           title={title}
           isHovered={isHovered}
-          className="text-5xl font-bold uppercase text-black"
+          className="text-5xl font-semibold uppercase text-black"
         />
 
         <p className="mt-2 text-sm text-black">
