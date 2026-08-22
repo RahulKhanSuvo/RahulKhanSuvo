@@ -28,7 +28,7 @@ function SlideShow({ images, className }: SlideShowProps) {
       loop
       speed={100}
       autoplay={{
-        delay: 600,
+        delay: 400,
         disableOnInteraction: false,
         pauseOnMouseEnter: false,
       }}
