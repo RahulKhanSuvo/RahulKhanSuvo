@@ -35,7 +35,7 @@ export default function MotionImage({
     >
       <motion.div
         style={{ y }}
-        className="absolute inset-x-0 -top-[12%] h-[124%]"
+        className="absolute inset-x-0 top-[-12%] h-[124%]"
       >
         <Image
           src={src}
