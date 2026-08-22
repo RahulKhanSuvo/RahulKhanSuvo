@@ -19,7 +19,7 @@ export default function ProjectOverview({
   githubLink,
 }: ProjectOverviewProps) {
   return (
-    <section className="mt-28">
+    <section className="mt-24">
       <Container>
         <MotionImage
           src={imageUrl}
