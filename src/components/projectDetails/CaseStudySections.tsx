@@ -35,16 +35,16 @@ export default function CaseStudySections({
       <Container>
         <div className="flex flex-col gap-10 md:gap-6">
           {/* Row 1: Intro Section (Text Left, Image Right) */}
-          <div className="flex flex-col-reverse md:grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:items-start">
-            <div className="lg:col-span-5 flex flex-col md:flex-row gap-2 md:gap-4 items-start justify-between">
-              <span className="text-base md:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
+          <div className="flex flex-col-reverse md:grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 md:items-start">
+            <div className="md:col-span-5 flex flex-col lg:flex-row gap-2 md:gap-4 items-start justify-between">
+              <span className="text-base lg:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
-              <p className="text-base md:text-2xl max-w-lg font-medium text-black tracking-wider">
+              <p className="text-base lg:text-2xl lg:max-w-lg font-medium text-black tracking-wider">
                 {intro.description}
               </p>
             </div>
-            <div className="lg:col-span-7">
+            <div className="md:col-span-7">
               <MotionImage
                 src={intro.imageUrl}
                 alt={intro.imageAlt}
@@ -54,19 +54,19 @@ export default function CaseStudySections({
           </div>
 
           {/* Row 2: Challenge Section (Image Left, Text Right) */}
-          <div className="flex flex-col md:grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 md:items-end">
-            <div className="lg:col-span-5">
+          <div className="flex flex-col md:grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 md:items-end">
+            <div className="md:col-span-5">
               <MotionImage
                 src={challenge.imageUrl}
                 alt={challenge.imageAlt}
                 className="w-full aspect-square md:aspect-4/5"
               />
             </div>
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-4">
-              <span className="sm:col-span-4 text-base md:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
+            <div className="md:col-span-7 flex flex-col lg:grid grid-cols-1 sm:grid-cols-12 gap-4">
+              <span className="sm:col-span-4 text-base lg:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {challenge.index}
               </span>
-              <p className="sm:col-span-8 text-base md:text-2xl font-medium text-black leading-snug">
+              <p className="sm:col-span-8 text-base lg:text-2xl font-medium text-black leading-snug">
                 {challenge.description}
               </p>
             </div>
