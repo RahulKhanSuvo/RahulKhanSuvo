@@ -31,16 +31,16 @@ export default function CaseStudySections({
   },
 }: CaseStudySectionsProps) {
   return (
-    <section className="pb-16 bg-white text-gray-900 font-sans">
+    <section className="pb-16 bg-white text-gray-900">
       <Container>
         <div>
           {/* Row 1: Intro Section (Text Left, Image Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-5 flex flex-col md:flex-row gap-4 items-start">
-              <span className="text-xs font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
+            <div className="lg:col-span-5 flex flex-col md:flex-row gap-4 items-start justify-between">
+              <span className="text-base md:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
-              <p className="text-base md:text-lg font-medium text-black leading-snug">
+              <p className="text-base md:text-2xl max-w-lg font-medium text-black tracking-wider">
                 {intro.description}
               </p>
             </div>
@@ -63,10 +63,10 @@ export default function CaseStudySections({
               />
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-4">
-              <span className="sm:col-span-4 text-xs font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
+              <span className="sm:col-span-4 text-base md:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {challenge.index}
               </span>
-              <p className="sm:col-span-8 text-base md:text-lg font-medium text-black leading-snug">
+              <p className="sm:col-span-8 text-base md:text-2xl font-medium text-black leading-snug">
                 {challenge.description}
               </p>
             </div>
