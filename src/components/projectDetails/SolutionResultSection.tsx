@@ -15,13 +15,13 @@ interface SolutionResultProps {
 
 export default function SolutionResultSection({
   solutionIndex = "03 — SOLUTION",
-  solutionText = "An identity with no secondary graphic elements. Light and shadow as the primary spatial communication tools. Print materials designed as objects in their own right — paper weight, binding, silence.",
+  solutionText = "",
   resultIndex = "04 — RESULT",
-  resultHeading = "An identity that behaves like good gallery lighting. Present, functional, and completely unobtrusive.",
-  bannerImageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
-  bannerImageAlt = "Textured concrete wall with shadow detail",
-  sideImageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
-  sideImageAlt = "Monolithic brutalist architecture with sharp shadows",
+  resultHeading = "",
+  bannerImageUrl = "",
+  bannerImageAlt = "",
+  sideImageUrl = "",
+  sideImageAlt = "",
 }: SolutionResultProps) {
   return (
     <section className="py-16 bg-white text-gray-900 font-sans">
