@@ -1,24 +1,24 @@
-<h1 data-importer="text" align="left">Hey 👋 What's up?</h1>
+<h1 align="left">Hi, I'm [YOUR NAME].</h1>
 
 ###
 
-<p data-importer="text" align="left">My name is [YOUR NAME] and I'm a frontend developer, from [YOUR LOCATION].</p>
+<p align="left">Frontend developer who got curious about the rest of the stack. I build interfaces with React and Next.js, and I'm steadily learning to make the parts behind them just as clean.</p>
 
 ###
 
-<h2 data-importer="text" align="left">About me</h2>
+<h2 align="left">these days</h2>
 
 ###
 
-<p data-importer="text" align="left">✨ Creating bugs since [YEAR]<br>📚 I'm currently learning advanced React, Next.js & backend architecture<br>🎯 Goals: grow into a strong full-stack developer and ship production-ready apps<br>🎲 Fun fact: [YOUR FUN FACT]</p>
+<p align="left">🧭 ~1 year paid, 2+ years hands-on<br>🌱 learning backend architecture & system design<br>🛠 trying to ship interfaces that stay fast and readable as they grow</p>
 
 ###
 
-<h2 data-importer="text" align="left">I code with</h2>
+<h2 align="left">I code with</h2>
 
 ###
 
-<div data-importer="techs" align="left">
+<div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
@@ -35,3 +35,11 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
 </div>
+
+###
+
+<h2 align="left">say hi</h2>
+
+###
+
+<p align="left">LinkedIn — [YOUR LINKEDIN LINK]<br>Email — [YOUR EMAIL]</p>
