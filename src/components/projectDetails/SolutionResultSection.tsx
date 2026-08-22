@@ -30,7 +30,7 @@ export default function SolutionResultSection({
         <MotionImage
           src={bannerImageUrl}
           alt={bannerImageAlt}
-          className="w-full aspect-[2.2/1] mb-12 sm:mb-16"
+          className="w-full aspect-square md:aspect-[2.2/1] mb-12 sm:mb-16"
         />
 
         {/* Bottom Content & Side Image Grid */}
