@@ -32,17 +32,17 @@ export default function ProjectOverview({
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 pt-2 items-start">
           {/* Client */}
           <div className="md:col-span-3 space-y-2">
-            <span className="block text-base lg:text-2xl uppercase tracking-wider text-gray-400 font-medium">
+            <span className="block text-lg uppercase tracking-wider text-gray-400 font-medium">
               Client
             </span>
-            <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight uppercase">
+            <h1 className="text-4xl lg:text-6xl font-semibold tracking-tight uppercase">
               {client}
             </h1>
           </div>
 
           {/* Overview + Live Link */}
           <div className="md:col-span-7 space-y-4">
-            <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
+            <span className="block text-lg uppercase tracking-wider text-gray-400 font-medium">
               Overview
             </span>
             <p className="text-gray-900 leading-relaxed text-base lg:text-lg xl:text-xl font-normal pr-2">
@@ -72,7 +72,7 @@ export default function ProjectOverview({
 
           {/* Year */}
           <div className="md:col-span-2 space-y-2 md:text-right">
-            <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
+            <span className="block text-lg uppercase tracking-wider text-gray-400 font-medium">
               Year
             </span>
             <p className="text-sm font-medium text-black">{year}</p>
