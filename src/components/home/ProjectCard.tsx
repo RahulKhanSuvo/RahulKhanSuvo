@@ -9,9 +9,9 @@ import AnimatedTitle from "../animation/AnimatedTitle";
 import TransitionLink from "../shared/TransitionLink";
 
 const aspectClasses = {
-  hero: "col-span-2 aspect-[16/8]",
-  tall: "col-span-1 aspect-[16/15]",
-  wide: "col-span-1 aspect-[4/2.2]",
+  hero: "md:col-span-2 aspect-square md:aspect-[16/8]",
+  tall: "col-span-1 md:col-span-2 aspect-square md:aspect-[16/15]",
+  wide: "col-span-1 md:col-span-2 aspect-square md:aspect-[4/2.2]",
 } as const;
 
 const stackVariants: Variants = {
