@@ -11,7 +11,7 @@ export const SectionTitle = ({
   return (
     <HyperText
       className={cn(
-        "uppercase text-black text-[6rem] font-bold font-heading leading-none",
+        "uppercase text-black text-6xl md:text-[6rem] font-bold font-heading leading-none",
         className,
       )}
     >
