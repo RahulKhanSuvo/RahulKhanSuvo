@@ -69,7 +69,7 @@ const WorkDetailPage = async ({
         liveLink={project.live}
         githubLink={project.github}
       />
-      <div className=" pt-20 md:pt-28 lg:pt-48">
+      <div className=" pt-20 md:pt-48">
         <CaseStudySections
           intro={{
             ...project.caseStudy.intro,
