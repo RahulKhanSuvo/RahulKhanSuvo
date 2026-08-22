@@ -4,7 +4,7 @@ export interface CaseStudySection {
   index: string;
   title: string;
   description: string;
-  banner?: string;
+  banner?: StaticImageData;
 }
 export type ProjectAspect = "hero" | "tall" | "wide";
 export interface Project {
@@ -27,6 +27,6 @@ export interface Project {
     intro: CaseStudySection;
     challenge: CaseStudySection;
     solution: { index: string; text: string; brand?: string };
-    result: { index: string; heading: string; banner?: string };
+    result: { index: string; heading: string; banner?: StaticImageData };
   };
 }

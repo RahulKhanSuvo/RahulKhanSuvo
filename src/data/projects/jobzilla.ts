@@ -1,35 +1,29 @@
 import jobzillamainImage from "@/assets/projects/jobzilla/jobzillgMain.png.png";
-import jobzillCandidateDashboard from "@/assets/projects/jobzilla/job-can-dashboard.png";
 import jobzillaHome from "@/assets/projects/jobzilla/JobZilla-home.png";
-import jobzillaAdminDashboard from "@/assets/projects/jobzilla/JobZilla-admin.png";
 import jobzillaFindJob from "@/assets/projects/jobzilla/JobZilla-findJob.png";
+import jobzillaDashboard from "@/assets/projects/jobzilla/job-can-dashboard.png";
+import jobzillaRecruiter from "@/assets/projects/jobzilla/JobZilla-recruter.png";
+import jobzillaAdmin from "@/assets/projects/jobzilla/JobZilla-admin.png";
 import { Project } from "@/types/project.type";
 
 export const jobzilla: Project = {
   title: "JobZilla",
   category: "Web Platform",
   year: "2025",
-  aspect: "hero",
+  aspect: "tall",
   isFeatured: true,
   description:
     "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
-  stack: [
-    "React.js",
-    "TypeScript",
-    "Node.js",
-    "Express.js",
-    "PostgreSQL",
-    "Prisma",
-    "Tailwind CSS",
-  ],
-  live: "https://job-zilla.vercel.app",
-  github: "https://github.com/RahulKhanSuvo/JobZilla",
+  stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+  live: "https://jobzilla.example.com",
+  github: "https://github.com/example/jobzilla",
   image: jobzillamainImage,
   gallery: [
-    { src: jobzillCandidateDashboard, alt: "JobZilla Candidate Dashboard" },
     { src: jobzillaHome, alt: "JobZilla Home" },
-    { src: jobzillaFindJob, alt: "JobZilla Find Job" },
-    { src: jobzillaAdminDashboard, alt: "JobZilla Admin Dashboard" },
+    { src: jobzillaFindJob, alt: "JobZilla Job Listing" },
+    { src: jobzillaDashboard, alt: "JobZilla Recruiter Dashboard" },
+    { src: jobzillaRecruiter, alt: "JobZilla Recruiter View" },
+    { src: jobzillaAdmin, alt: "JobZilla Admin Panel" },
   ],
   caseStudy: {
     intro: {
@@ -37,12 +31,14 @@ export const jobzilla: Project = {
       title: "JobZilla Project",
       description:
         "Job searching is fragmented — job boards overwhelm candidates with noise while recruiters drown in unqualified applications. JobZilla was built to close that loop with intelligent matching on both sides.",
+      banner: jobzillaHome,
     },
     challenge: {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
         "Delivering a fast, filterable search experience across thousands of listings while keeping relevance high. Real-time alerting and a recruiter dashboard needed to work seamlessly on a shared data model.",
+      banner: jobzillaFindJob,
     },
     solution: {
       index: "03 — SOLUTION",
@@ -53,6 +49,7 @@ export const jobzilla: Project = {
       index: "04 — RESULT",
       heading:
         "A hiring experience that feels instant — candidates find relevant roles in seconds and recruiters manage every applicant from one calm, fast interface.",
+      banner: jobzillaDashboard,
     },
   },
 };
