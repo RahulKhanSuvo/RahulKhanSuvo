@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, type Variants } from "motion/react";
 import { Project } from "../../data/projectData";
 import SlideShow from "./SlideShow";
 import AnimatedTitle from "../animation/AnimatedTitle";
+import { usePageTransition } from "@/providers/TransitionProvider";
+import TransitionLink from "../shared/TransitionLink";
 
 const aspectClasses = {
   hero: "col-span-2 aspect-[16/8]",
@@ -49,7 +50,10 @@ export const ProjectCard = ({
       onHoverEnd={() => setIsHovered(false)}
       className={`group relative w-full ${aspectClasses[aspect]}`}
     >
-      <Link href={`/project/${title}`} className="block h-full w-full">
+      <TransitionLink
+        href={`/project/${title}`}
+        className="block h-full w-full"
+      >
         {/* Image */}
         <div className="relative h-full w-full overflow-hidden">
           <Image
@@ -91,7 +95,7 @@ export const ProjectCard = ({
             ))}
           </div>
         </div>
-      </Link>
+      </TransitionLink>
 
       {/* Text */}
       <div className="mt-4 flex items-start justify-between">
