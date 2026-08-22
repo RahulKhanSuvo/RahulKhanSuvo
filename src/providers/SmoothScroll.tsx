@@ -2,6 +2,7 @@
 
 import Lenis from "lenis";
 import { useEffect } from "react";
+import { setLenis } from "@/lib/lenis";
 
 export default function SmoothScroll({
   children,
@@ -15,6 +16,8 @@ export default function SmoothScroll({
       touchMultiplier: 2,
     });
 
+    setLenis(lenis);
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -24,6 +27,7 @@ export default function SmoothScroll({
 
     return () => {
       lenis.destroy();
+      setLenis(null);
     };
   }, []);
 
