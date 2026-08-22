@@ -17,21 +17,17 @@ interface CaseStudySectionsProps {
 export default function CaseStudySections({
   intro = {
     index: "01 — INTRO",
-    title: "Lumen Project",
-    description:
-      "Gallery identities often compete with the work they represent. Lumen needed the opposite — a presence strong enough to be coherent, controlled enough to step back.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
-    imageAlt: "Architectural concrete shadow detail",
+    title: "Intro",
+    description: "",
+    imageUrl: "",
+    imageAlt: "",
   },
   challenge = {
     index: "02 — CHALLENGE",
     title: "Challenge",
-    description:
-      "Designing for institutional neutrality without producing something anonymous. The system had to carry weight in print and spatial contexts while remaining genuinely subordinate to the work on the walls.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
-    imageAlt: "Monolithic stone sculpture geometry",
+    description: "",
+    imageUrl: "",
+    imageAlt: "",
   },
 }: CaseStudySectionsProps) {
   return (
@@ -44,7 +40,7 @@ export default function CaseStudySections({
               <span className="text-lg uppercase text-gray-400 tracking-wider">
                 {intro.index}
               </span>
-              <p className="text-lg md:text-xl lg:text-2xl font-medium text-black leading-snug">
+              <p className="text-base md:text-lg lg:text-xl font-medium text-black leading-snug">
                 {intro.description}
               </p>
             </div>
@@ -76,7 +72,7 @@ export default function CaseStudySections({
               <span className="sm:col-span-4 text-base md:text-lg lg:text-xl font-mono uppercase text-gray-400 tracking-wider">
                 {challenge.index}
               </span>
-              <p className="sm:col-span-8 text-lg md:text-xl lg:text-2xl font-medium text-black leading-snug">
+              <p className="sm:col-span-8 text-base md:text-lg lg:text-xl font-medium text-black leading-snug">
                 {challenge.description}
               </p>
             </div>
