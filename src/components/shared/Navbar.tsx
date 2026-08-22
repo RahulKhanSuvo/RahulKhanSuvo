@@ -1,18 +1,18 @@
-import Link from "next/link";
 import { Container } from "../common/Container";
+import TransitionLink from "./TransitionLink";
 
 const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full pt-5 z-50">
       <Container className="flex justify-between items-center">
         {/* logo */}
-        <Link
+        <TransitionLink
           href="/"
           className="flex flex-col font-bold font-heading text-[3rem] leading-none text-neutral-900"
         >
           <span>RAHUL</span>
           <span className="pl-5">KHAN</span>
-        </Link>
+        </TransitionLink>
 
         {/* nav & resume button */}
         <div className="flex items-center gap-6">
