@@ -50,7 +50,9 @@ export const ServicesSection = ({
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className={`flex flex-col max-w-full ${
-                  isRight ? "items-end text-right ml-auto" : "items-start text-left"
+                  isRight
+                    ? "md:items-end md:text-right ml-auto"
+                    : "md:items-start md:text-left"
                 }`}
               >
                 {/* Clickable Header Row */}
@@ -73,7 +75,7 @@ export const ServicesSection = ({
                         stiffness: 350,
                         damping: 20,
                       }}
-                      className="relative inline-flex items-center justify-center align-middle mx-1 sm:mx-2 h-[1.15em] w-[2.2em] sm:w-[2.6em] overflow-hidden rounded-2xl border border-neutral-300 shadow-sm bg-neutral-100"
+                      className="relative inline-flex items-center justify-center align-middle mx-1 sm:mx-2 h-[1.15em] w-[2.2em] sm:w-[2.6em] overflow-hidden rounded-lg md:rounded-2xl border border-neutral-300 shadow-sm bg-neutral-100"
                     >
                       <Image
                         src={service.image}
@@ -111,9 +113,6 @@ export const ServicesSection = ({
                     >
                       <p className="text-base sm:text-lg font-normal text-neutral-600 leading-relaxed">
                         {service.description}
-                      </p>
-                      <p className="text-[0.7rem] sm:text-xs tracking-[0.2em] font-mono text-neutral-400 uppercase leading-relaxed pt-1">
-                        {service.tags.join(" · ")}
                       </p>
                     </motion.div>
                   )}
