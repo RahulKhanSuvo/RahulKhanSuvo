@@ -81,13 +81,13 @@ export const ProjectCard = ({
           </div>
 
           {/* Stack */}
-          <div className="absolute bottom-1 right-0 z-30 flex max-w-full flex-wrap justify-end gap-2 overflow-hidden px-3 py-3">
+          <div className="absolute bottom-1 right-0 z-30 flex max-w-full flex-wrap justify-end gap-1.5 px-3 py-3 sm:gap-2">
             {stack.map((tech, index) => (
               <motion.span
                 key={tech}
                 custom={index}
                 variants={stackVariants}
-                className="rounded border border-white px-3 py-1 text-lg uppercase text-white backdrop-blur-sm"
+                className="rounded border border-white px-2 py-1 text-xs uppercase text-white backdrop-blur-sm sm:px-3 sm:py-1 sm:text-lg"
               >
                 {tech}
               </motion.span>
@@ -97,14 +97,14 @@ export const ProjectCard = ({
       </TransitionLink>
 
       {/* Text */}
-      <div className="mt-4 flex items-start justify-between">
+      <div className="mt-3 flex items-start justify-between gap-3 sm:mt-4">
         <AnimatedTitle
           title={title}
           isHovered={isHovered}
-          className="text-5xl font-semibold uppercase text-black"
+          className="text-3xl font-semibold uppercase text-black sm:text-4xl lg:text-5xl"
         />
 
-        <p className="mt-2 text-sm text-black">
+        <p className="mt-1 shrink-0 text-xs text-black sm:mt-2 sm:text-sm">
           {category} · {year}
         </p>
       </div>

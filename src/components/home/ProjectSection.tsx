@@ -12,7 +12,7 @@ export const ProjectSection = () => {
         </span>
         <SectionTitle className="text-center">Featured Work</SectionTitle>
         {/**/}
-        <div className="mt-16 grid grid-cols-2 gap-8">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 sm:gap-8">
           {projectData.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}
