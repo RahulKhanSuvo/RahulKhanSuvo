@@ -88,10 +88,10 @@ export const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-16 sm:mt-24 flex justify-end"
+          className="mt-16 sm:mt-20 flex justify-end"
         >
           <div className="w-full md:w-7/12 lg:w-[44%]">
-            <p className="text-3xl font-normal text-neutral-700 leading-relaxed">
+            <p className="text-2xl sm:text-3xl lg:text-[2.25rem] font-normal text-neutral-700 leading-relaxed">
               Worked as a Frontend Developer at{" "}
               <motion.a
                 href="https://softvence.agency"
