@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">Frontend developer who got curious about the rest of the stack. I build interfaces with React and Next.js, and I'm steadily learning to make the parts behind them just as clean.</p>
+<p align="left">Full-stack developer who likes both the interface and the logic behind it. I build with React and Next.js up front, Node and friends behind it, and I care about the whole thing holding together cleanly.</p>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">🧭 ~1 year paid, 2+ years hands-on<br>🌱 learning backend architecture & system design<br>🛠 trying to ship interfaces that stay fast and readable as they grow</p>
+<p align="left">🧭 ~1 year paid, 2+ years hands-on<br>🌱 going deeper on system design & scaling<br>🛠 shipping features end to end — from UI to API</p>
 
 ###
 
@@ -44,6 +44,8 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="40" alt="redux logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zustand/zustand-original.svg" height="40" alt="zustand logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" height="40" alt="vite logo"  />
 </div>
