@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import Image from "next/image";
+import MotionImage from "../ui/MotionImage";
 
 interface SectionData {
   index: string;
@@ -37,42 +37,36 @@ export default function CaseStudySections({
           {/* Row 1: Intro Section (Text Left, Image Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-5 flex gap-4 items-start">
-              <span className="text-lg uppercase text-gray-400 tracking-wider whitespace-nowrap">
+              <span className="text-xs font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
-              <p className="text-base md:text-lg lg:text-xl font-medium text-black leading-snug">
+              <p className="text-base md:text-lg font-medium text-black leading-snug">
                 {intro.description}
               </p>
             </div>
             <div className="lg:col-span-7">
-              <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-100">
-                <Image
-                  src={intro.imageUrl}
-                  alt={intro.imageAlt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <MotionImage
+                src={intro.imageUrl}
+                alt={intro.imageAlt}
+                className="w-full aspect-4/3"
+              />
             </div>
           </div>
 
           {/* Row 2: Challenge Section (Image Left, Text Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-5">
-              <div className="relative aspect-4/5 w-full overflow-hidden bg-gray-100">
-                <Image
-                  src={challenge.imageUrl}
-                  alt={challenge.imageAlt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              <MotionImage
+                src={challenge.imageUrl}
+                alt={challenge.imageAlt}
+                className="w-full aspect-4/5"
+              />
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-4">
-              <span className="sm:col-span-4 text-base md:text-lg lg:text-xl font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
+              <span className="sm:col-span-4 text-xs font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {challenge.index}
               </span>
-              <p className="sm:col-span-8 text-base md:text-lg lg:text-xl font-medium text-black leading-snug">
+              <p className="sm:col-span-8 text-base md:text-lg font-medium text-black leading-snug">
                 {challenge.description}
               </p>
             </div>

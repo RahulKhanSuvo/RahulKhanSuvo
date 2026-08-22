@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import Image from "next/image";
+import MotionImage from "../ui/MotionImage";
 
 interface SolutionResultProps {
   solutionIndex?: string;
@@ -27,14 +27,11 @@ export default function SolutionResultSection({
     <section className="py-16 bg-white text-gray-900 font-sans">
       <Container>
         {/* Top Banner Image */}
-        <div className="relative w-full aspect-[2.2/1] overflow-hidden mb-12 sm:mb-16 bg-gray-100">
-          <Image
-            src={bannerImageUrl}
-            alt={bannerImageAlt}
-            fill
-            className="object-cover"
-          />
-        </div>
+        <MotionImage
+          src={bannerImageUrl}
+          alt={bannerImageAlt}
+          className="w-full aspect-[2.2/1] mb-12 sm:mb-16"
+        />
 
         {/* Bottom Content & Side Image Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -45,7 +42,7 @@ export default function SolutionResultSection({
               <span className="sm:col-span-4 text-xs font-mono uppercase text-gray-400 tracking-wider">
                 {solutionIndex}
               </span>
-              <p className="sm:col-span-8 text-base sm:text-lg font-medium text-black leading-snug">
+              <p className="sm:col-span-8 text-base md:text-lg font-medium text-black leading-snug">
                 {solutionText}
               </p>
             </div>
@@ -63,11 +60,10 @@ export default function SolutionResultSection({
           {/* Right Column: Tall Architectural Image */}
           <div className="lg:col-span-5">
             <div className="relative aspect-[3/3.50] w-full overflow-hidden bg-gray-100">
-              <Image
+              <MotionImage
                 src={sideImageUrl}
                 alt={sideImageAlt}
-                fill
-                className="object-cover"
+                className="w-full aspect-[3/3.50]"
               />
             </div>
           </div>

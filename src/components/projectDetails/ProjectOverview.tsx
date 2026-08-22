@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import Image from "next/image";
+import MotionImage from "../ui/MotionImage";
 
 interface ProjectOverviewProps {
   client?: string;
@@ -22,15 +22,12 @@ export default function ProjectOverview({
     <section className="mt-28">
       <Container>
         {/* Top Banner Image with parallax */}
-        <div className="relative w-full aspect-[1.2/0.5] overflow-hidden mb-6 bg-gray-100">
-          <Image
-            src={imageUrl}
-            alt={`${client} project header`}
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
+        <MotionImage
+          src={imageUrl}
+          alt={`${client} project header`}
+          priority
+          className="w-full aspect-[1.2/0.5] mb-6"
+        />
 
         {/* Project Details Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 pt-2 items-start">
