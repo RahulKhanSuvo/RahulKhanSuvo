@@ -15,8 +15,8 @@ export const jobzilla: Project = {
   description:
     "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
   stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
-  live: "https://jobzilla.example.com",
-  github: "https://github.com/example/jobzilla",
+  live: "https://job-zilla.vercel.app",
+  github: "https://github.com/RahulKhanSuvo/jobZilla-server",
   image: jobzillamainImage,
   gallery: [
     { src: jobzillaHome, alt: "JobZilla Home" },
