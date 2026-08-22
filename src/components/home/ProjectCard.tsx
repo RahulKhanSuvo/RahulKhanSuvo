@@ -6,7 +6,6 @@ import { motion, type Variants } from "motion/react";
 import { Project } from "../../data/projectData";
 import SlideShow from "./SlideShow";
 import AnimatedTitle from "../animation/AnimatedTitle";
-import { usePageTransition } from "@/providers/TransitionProvider";
 import TransitionLink from "../shared/TransitionLink";
 
 const aspectClasses = {
