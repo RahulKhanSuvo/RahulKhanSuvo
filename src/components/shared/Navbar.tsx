@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* logo */}
         <TransitionLink
           href="/"
-          className={`font-bold font-heading text-[3rem] leading-none ${
+          className={`font-bold font-heading text-[3.5rem] leading-none ${
             open ? "text-white" : "text-neutral-900"
           }`}
         >
