@@ -20,7 +20,9 @@ const WorkDetailPage = async ({
     const currentIndex = projectData.indexOf(project);
     const nextProject = projectData[(currentIndex + 1) % projectData.length];
 
-    const [g0, g1, g2] = project.gallery;
+    const introBanner = project.caseStudy.intro.banner;
+    const challengeBanner = project.caseStudy.challenge.banner;
+    const resultBanner = project.caseStudy.result.banner;
 
     return (
         <>
@@ -30,18 +32,19 @@ const WorkDetailPage = async ({
                 year={project.year}
                 imageUrl={project.image.src}
                 liveLink={project.live}
+                githubLink={project.github}
             />
             <div className='pt-48'>
                 <CaseStudySections
                     intro={{
                         ...project.caseStudy.intro,
-                        imageUrl: g0?.src.src ?? project.image.src,
-                        imageAlt: g0?.alt ?? project.title,
+                        imageUrl: introBanner?.src ?? project.image.src,
+                        imageAlt: project.title,
                     }}
                     challenge={{
                         ...project.caseStudy.challenge,
-                        imageUrl: g1?.src.src ?? project.image.src,
-                        imageAlt: g1?.alt ?? project.title,
+                        imageUrl: challengeBanner?.src ?? project.image.src,
+                        imageAlt: project.title,
                     }}
                 />
             </div>
@@ -51,10 +54,10 @@ const WorkDetailPage = async ({
                 brandText={project.caseStudy.solution.brand}
                 resultIndex={project.caseStudy.result.index}
                 resultHeading={project.caseStudy.result.heading}
-                bannerImageUrl={g2?.src.src ?? project.image.src}
-                bannerImageAlt={g2?.alt ?? project.title}
-                sideImageUrl={g0?.src.src ?? project.image.src}
-                sideImageAlt={g0?.alt ?? project.title}
+                bannerImageUrl={resultBanner?.src ?? project.image.src}
+                bannerImageAlt={project.title}
+                sideImageUrl={introBanner?.src ?? project.image.src}
+                sideImageAlt={project.title}
             />
             <TechStack stack={project.stack} />
             <NextProject
