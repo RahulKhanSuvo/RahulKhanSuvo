@@ -7,6 +7,7 @@ interface ProjectOverviewProps {
   year?: string;
   imageUrl?: string;
   liveLink?: string;
+  githubLink?: string;
 }
 
 export default function ProjectOverview({
@@ -15,6 +16,7 @@ export default function ProjectOverview({
   year = "2026",
   imageUrl = "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1600",
   liveLink = "#",
+  githubLink,
 }: ProjectOverviewProps) {
   return (
     <section className="mt-28">
@@ -47,17 +49,29 @@ export default function ProjectOverview({
             <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
               Overview
             </span>
-            <p className="text-gray-900 leading-relaxed text-lg md:text-xl lg:text-2xl font-normal pr-2">
+            <p className="text-gray-900 leading-relaxed text-base md:text-lg lg:text-xl font-normal pr-2">
               {overview}
             </p>
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-xs uppercase tracking-widest font-semibold text-black border-b border-black pb-0.5 hover:opacity-50 transition-opacity duration-200"
-            >
-              See Project ↗
-            </a>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
+              <a
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-xs uppercase tracking-widest font-semibold text-black border-b border-black pb-0.5 hover:opacity-50 transition-opacity duration-200"
+              >
+                See Project ↗
+              </a>
+              {githubLink && (
+                <a
+                  href={githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-xs uppercase tracking-widest font-semibold text-black border-b border-black pb-0.5 hover:opacity-50 transition-opacity duration-200"
+                >
+                  GitHub ↗
+                </a>
+              )}
+            </div>
           </div>
 
           {/* Year */}
