@@ -31,7 +31,7 @@ export default function CaseStudySections({
   },
 }: CaseStudySectionsProps) {
   return (
-    <section className="pb-16 bg-white text-gray-900">
+    <section className="pb-6 bg-white text-gray-900">
       <Container>
         <div>
           {/* Row 1: Intro Section (Text Left, Image Right) */}
