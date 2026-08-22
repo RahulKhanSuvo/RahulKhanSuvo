@@ -29,23 +29,23 @@ export default function ProjectOverview({
         />
 
         {/* Project Details Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 pt-2 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 pt-2 items-start">
           {/* Client */}
-          <div className="lg:col-span-3 space-y-2">
-            <span className="block text-base md:text-2xl uppercase tracking-wider text-gray-400 font-medium">
+          <div className="md:col-span-3 space-y-2">
+            <span className="block text-base lg:text-2xl uppercase tracking-wider text-gray-400 font-medium">
               Client
             </span>
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-black uppercase">
+            <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight uppercase">
               {client}
             </h1>
           </div>
 
           {/* Overview + Live Link */}
-          <div className="lg:col-span-7 space-y-4">
+          <div className="md:col-span-7 space-y-4">
             <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
               Overview
             </span>
-            <p className="text-gray-900 leading-relaxed text-base md:text-lg lg:text-xl font-normal pr-2">
+            <p className="text-gray-900 leading-relaxed text-base lg:text-lg xl:text-xl font-normal pr-2">
               {overview}
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1">
@@ -71,7 +71,7 @@ export default function ProjectOverview({
           </div>
 
           {/* Year */}
-          <div className="lg:col-span-2 space-y-2 lg:text-right">
+          <div className="md:col-span-2 space-y-2 md:text-right">
             <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
               Year
             </span>
