@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import ParallaxImage from "../ui/ParallaxImage";
+import Image from "next/image";
 
 interface SolutionResultProps {
   solutionIndex?: string;
@@ -28,10 +28,11 @@ export default function SolutionResultSection({
       <Container>
         {/* Top Banner Image */}
         <div className="relative w-full aspect-[2.2/1] overflow-hidden mb-12 sm:mb-16 bg-gray-100">
-          <ParallaxImage
+          <Image
             src={bannerImageUrl}
             alt={bannerImageAlt}
-            imgClassName="object-cover "
+            fill
+            className="object-cover"
           />
         </div>
 
@@ -62,11 +63,11 @@ export default function SolutionResultSection({
           {/* Right Column: Tall Architectural Image */}
           <div className="lg:col-span-5">
             <div className="relative aspect-[3/3.50] w-full overflow-hidden bg-gray-100">
-              <ParallaxImage
+              <Image
                 src={sideImageUrl}
                 alt={sideImageAlt}
-                speed={12}
-                imgClassName="object-cover "
+                fill
+                className="object-cover"
               />
             </div>
           </div>

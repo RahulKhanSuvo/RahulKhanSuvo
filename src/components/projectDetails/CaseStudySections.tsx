@@ -1,5 +1,5 @@
 import { Container } from "../common/Container";
-import ParallaxImage from "../ui/ParallaxImage";
+import Image from "next/image";
 
 interface SectionData {
   index: string;
@@ -37,7 +37,7 @@ export default function CaseStudySections({
           {/* Row 1: Intro Section (Text Left, Image Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-5 flex gap-4 items-start">
-              <span className="text-lg uppercase text-gray-400 tracking-wider">
+              <span className="text-lg uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
               <p className="text-base md:text-lg lg:text-xl font-medium text-black leading-snug">
@@ -46,11 +46,11 @@ export default function CaseStudySections({
             </div>
             <div className="lg:col-span-7">
               <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-100">
-                <ParallaxImage
+                <Image
                   src={intro.imageUrl}
                   alt={intro.imageAlt}
-                  speed={10}
-                  imgClassName="object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -60,16 +60,16 @@ export default function CaseStudySections({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
             <div className="lg:col-span-5">
               <div className="relative aspect-4/5 w-full overflow-hidden bg-gray-100">
-                <ParallaxImage
+                <Image
                   src={challenge.imageUrl}
                   alt={challenge.imageAlt}
-                  speed={10}
-                  imgClassName="object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-4">
-              <span className="sm:col-span-4 text-base md:text-lg lg:text-xl font-mono uppercase text-gray-400 tracking-wider">
+              <span className="sm:col-span-4 text-base md:text-lg lg:text-xl font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {challenge.index}
               </span>
               <p className="sm:col-span-8 text-base md:text-lg lg:text-xl font-medium text-black leading-snug">
