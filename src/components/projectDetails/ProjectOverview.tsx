@@ -21,7 +21,6 @@ export default function ProjectOverview({
   return (
     <section className="mt-28">
       <Container>
-        {/* Top Banner Image with parallax */}
         <MotionImage
           src={imageUrl}
           alt={`${client} project header`}
