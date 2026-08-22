@@ -9,7 +9,7 @@ import GlitchImage from "./GlitchImage";
 function HeroSection() {
   return (
     <section className="relative overflow-hidden h-screen flex justify-between flex-col py-5">
-      <div className="absolute w-87.5 h-130  left-1/2 top-1/2 -translate-x-1/2 -translate-y-3/7 z-10">
+      <div className="absolute w-88 aspect-87.5/130 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <GlitchImage src={heroImage} alt="Hero" />
       </div>
       <div className="relative">
