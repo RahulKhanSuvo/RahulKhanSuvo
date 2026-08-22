@@ -30,9 +30,10 @@ export default function TransitionProvider({
   const router = useRouter();
   const pathname = usePathname();
 
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(true);
   const [isExiting, setIsExiting] = useState(false);
   const [nextPath, setNextPath] = useState<string | null>(null);
+  const [firstLoad, setFirstLoad] = useState(true);
 
   const navigateTo = useCallback(
     (href: string) => {
@@ -63,6 +64,13 @@ export default function TransitionProvider({
     setNextPath(null);
   };
 
+  const handleRevealComplete = () => {
+    setIsTransitioning(false);
+    setIsExiting(false);
+    setNextPath(null);
+    setFirstLoad(false);
+  };
+
   return (
     <TransitionContext.Provider value={{ navigateTo }}>
       {children}
@@ -74,10 +82,10 @@ export default function TransitionProvider({
               key={index}
               className="h-full flex-1 bg-black"
               initial={{
-                y: "-100%",
+                y: firstLoad ? "0%" : "-100%",
               }}
               animate={{
-                y: isExiting ? "100%" : "0%",
+                y: isExiting ? "100%" : firstLoad ? "100%" : "0%",
               }}
               transition={{
                 duration: 0.7,
@@ -85,11 +93,12 @@ export default function TransitionProvider({
                 ease: [0.76, 0, 0.24, 1],
               }}
               onAnimationComplete={() => {
+                if (index !== column - 1) return;
                 if (isExiting) {
-                  if (index === column - 1) {
-                    handleExitComplete();
-                  }
-                } else if (index === column - 1) {
+                  handleExitComplete();
+                } else if (firstLoad) {
+                  handleRevealComplete();
+                } else {
                   handleCoverComplete();
                 }
               }}
