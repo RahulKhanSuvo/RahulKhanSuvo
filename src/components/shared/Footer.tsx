@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Container } from "../common/Container";
+import Magnet from "../Magnet";
 
 export const Footer = () => {
   return (
@@ -49,23 +50,27 @@ export const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
           >
             {/* Email link */}
-            <a
-              href="mailto:rahulkhansuvo@gmail.com"
-              className="text-2xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-200 hover:text-white transition-colors duration-300 group flex items-center gap-2"
-            >
-              <span>rahul.khan.suvo@gmail.com</span>
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-                ↗
-              </span>
-            </a>
+            <Magnet>
+              <a
+                href="mailto:rahulkhansuvo@gmail.com"
+                className="text-2xl sm:text-4xl lg:text-5xl font-light tracking-tight text-neutral-200 hover:text-white transition-colors duration-300 group flex items-center gap-2"
+              >
+                <span>rahul.khan.suvo@gmail.com</span>
+                <span className="inline-block transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                  ↗
+                </span>
+              </a>
+            </Magnet>
 
             {/* Phone link */}
-            <a
-              href="tel:+8801700000000"
-              className="text-xl sm:text-3xl lg:text-4xl font-light tracking-tight text-neutral-400 hover:text-white transition-colors duration-300"
-            >
-              +880 1609553810
-            </a>
+            <Magnet>
+              <a
+                href="tel:+8801700000000"
+                className="text-xl sm:text-3xl lg:text-4xl font-light tracking-tight text-neutral-400 hover:text-white transition-colors duration-300"
+              >
+                +880 1609553810
+              </a>
+            </Magnet>
           </motion.div>
         </div>
 
