@@ -8,12 +8,12 @@ import GlitchImage from "./GlitchImage";
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden h-screen flex justify-between flex-col py-5">
-      <div className="absolute w-88 aspect-87.5/130 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+    <section className="relative overflow-hidden h-screen flex justify-between flex-col py-5 px-1">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[62vw] max-w-72 sm:max-w-80 md:w-88 aspect-87.5/130">
         <GlitchImage src={heroImage} alt="Hero" />
       </div>
       <div className="relative">
-        <ScrollVelocityContainer className="font-bold font-heading first-letter:uppercase leading-none md:text-[16rem] pt-30">
+        <ScrollVelocityContainer className="font-bold font-heading first-letter:uppercase text-[14rem]/[0.9] sm:text-[8rem]/[0.9] md:text-[16rem]/[0.9] pt-24 sm:pt-24 md:pt-30">
           <ScrollVelocityRow
             baseVelocity={18}
             direction={1}
@@ -43,9 +43,9 @@ function HeroSection() {
           </ScrollVelocityRow>
         </ScrollVelocityContainer>
       </div>
-      <Container className="flex justify-between items-center gap-4 w-full">
+      <Container className="flex flex-col gap-3 w-full sm:flex-row sm:justify-between sm:items-center sm:gap-4">
         {/*socil link*/}
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-3 text-sm sm:gap-4 sm:text-base">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -69,7 +69,7 @@ function HeroSection() {
           </a>
         </div>
         {/*open to work*/}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 text-sm sm:text-base">
           {/*blink dot*/}
           <span className="relative flex size-2 ">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
