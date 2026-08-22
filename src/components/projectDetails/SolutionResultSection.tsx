@@ -34,31 +34,31 @@ export default function SolutionResultSection({
         />
 
         {/* Bottom Content & Side Image Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
           {/* Left Column: Solution, Branding, and Result */}
-          <div className="lg:col-span-7 flex flex-col justify-between h-full pt-2">
+          <div className="md:col-span-7 flex flex-col justify-between h-full pt-2">
             {/* Solution Block */}
-            <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 items-start">
-              <span className="sm:col-span-4 text-base md:text-xl font-mono uppercase text-gray-400 tracking-wider">
+            <div className="flex flex-col lg:grid grid-cols-1 sm:grid-cols-12 gap-2 items-start">
+              <span className="sm:col-span-4 text-base lg:text-xl  uppercase text-gray-400 tracking-wider">
                 {solutionIndex}
               </span>
-              <p className="sm:col-span-8 text-base md:text-2xl font-medium text-black leading-snug">
+              <p className="sm:col-span-8 text-base lg:text-2xl font-medium text-black leading-snug">
                 {solutionText}
               </p>
             </div>
             {/* Result Block */}
-            <div className="md:grid grid-cols-1 hidden sm:grid-cols-12 gap-4 items-start">
-              <span className="sm:col-span-4 text-base md:text-xl font-mono uppercase text-gray-400 tracking-wider">
+            <div className=" flex flex-col lg:grid grid-cols-12 gap-4 lg:items-start">
+              <span className="sm:col-span-4 text-base lg:text-xl  uppercase text-gray-400 tracking-wider">
                 {resultIndex}
               </span>
-              <h2 className="sm:col-span-8 text-base md:text-2xl font-medium text-black leading-tight">
+              <h2 className="sm:col-span-8 text-base lg:text-2xl font-medium text-black leading-tight">
                 {resultHeading}
               </h2>
             </div>
           </div>
 
           {/* Right Column: Tall Architectural Image */}
-          <div className="lg:col-span-5">
+          <div className="md:col-span-5">
             <div className="relative aspect-[3/3.50] w-full overflow-hidden bg-gray-100">
               <MotionImage
                 src={sideImageUrl}
@@ -66,11 +66,11 @@ export default function SolutionResultSection({
                 className="w-full aspect-[3/3.50]"
               />
             </div>
-            <div className="grid grid-cols-1 md:hidden sm:grid-cols-12 gap-2 pt-3.5 items-start">
-              <span className="sm:col-span-4 text-base md:text-xl font-mono uppercase text-gray-400 tracking-wider">
+            <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-3.5 items-start md:hidden">
+              <span className="sm:col-span-4 text-base lg:text-xl  uppercase text-gray-400 tracking-wider">
                 {resultIndex}
               </span>
-              <h2 className="sm:col-span-8 text-base md:text-2xl font-medium text-black leading-tight">
+              <h2 className="sm:col-span-8 text-base lg:text-2xl font-medium text-black leading-tight">
                 {resultHeading}
               </h2>
             </div>
