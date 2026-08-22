@@ -46,9 +46,27 @@ function HeroSection() {
       <Container className="flex justify-between items-center gap-4 w-full">
         {/*socil link*/}
         <div className="flex gap-4">
-          <a href="#">Github</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">WhatsApp</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/RahulKhanSuvo"
+          >
+            Github
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/rahul-khan-suvo"
+          >
+            LinkedIn
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://wa.me/8801609553810"
+          >
+            WhatsApp
+          </a>
         </div>
         {/*open to work*/}
         <div className="flex items-center gap-2">
