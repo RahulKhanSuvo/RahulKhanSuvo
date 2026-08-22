@@ -13,7 +13,15 @@ export const jobzilla: Project = {
   isFeatured: true,
   description:
     "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
-  stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+  stack: [
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Prisma",
+    "Tailwind CSS",
+  ],
   live: "https://jobzilla.example.com",
   github: "https://github.com/example/jobzilla",
   image: jobzillamainImage,

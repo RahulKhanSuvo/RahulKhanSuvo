@@ -170,11 +170,11 @@ export const TechStackSection = () => {
             ENGINEERING (REACT.JS / NEXT.JS),{" "}
             <SwiperPill images={imageSets[1]} delay={2500} /> TYPESCRIPT,
             TAILWIND CSS, <SwiperPill images={imageSets[2]} delay={2200} />{" "}
-            BACKEND ENGINEERING (NODE.JS / EXPRESS), REST & GRAPHQL APIS,{" "}
+            BACKEND ENGINEERING (NODE.JS / EXPRESS), REST APIS,{" "}
             <SwiperPill images={imageSets[3]} delay={2800} /> DATABASES
-            (POSTGRESQL & MONGODB), PRISMA ORM & REDIS,{" "}
+            (POSTGRESQL & MONGODB), PRISMA & MONGOOSE ORM,{" "}
             <SwiperPill images={imageSets[4]} delay={2400} /> DEVOPS & CLOUD
-            (DOCKER, GIT, VERCEL),{" "}
+            (LINUX, DOCKER, GIT, VERCEL),{" "}
             <SwiperPill images={imageSets[5]} delay={2600} /> SYSTEM
             ARCHITECTURE & HIGH PERFORMANCE APPLICATIONS.
           </div>
