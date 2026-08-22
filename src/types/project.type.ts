@@ -26,7 +26,12 @@ export interface Project {
   caseStudy: {
     intro: CaseStudySection;
     challenge: CaseStudySection;
-    solution: { index: string; text: string; brand?: string };
+    solution: {
+      index: string;
+      text: string;
+      brand?: string;
+      banner?: StaticImageData;
+    };
     result: { index: string; heading: string; banner?: StaticImageData };
   };
 }

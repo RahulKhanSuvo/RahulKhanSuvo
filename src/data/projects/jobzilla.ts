@@ -4,6 +4,10 @@ import jobzillaFindJob from "@/assets/projects/jobzilla/JobZilla-findJob.png";
 import jobzillaDashboard from "@/assets/projects/jobzilla/job-can-dashboard.png";
 import jobzillaRecruiter from "@/assets/projects/jobzilla/JobZilla-recruter.png";
 import jobzillaAdmin from "@/assets/projects/jobzilla/JobZilla-admin.png";
+import jobHomeMock from "@/assets/projects/jobzilla/recuterMock.png";
+import jobFindJobMock from "@/assets/projects/jobzilla/findJobMock.jpeg";
+import jobfondJobMobile from "@/assets/projects/jobzilla/findJobMock.png";
+
 import { Project } from "@/types/project.type";
 
 export const jobzilla: Project = {
@@ -31,25 +35,26 @@ export const jobzilla: Project = {
       title: "JobZilla Project",
       description:
         "Job searching is fragmented — job boards overwhelm candidates with noise while recruiters drown in unqualified applications. JobZilla was built to close that loop with intelligent matching on both sides.",
-      banner: jobzillaHome,
+      banner: jobHomeMock,
     },
     challenge: {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
         "Delivering a fast, filterable search experience across thousands of listings while keeping relevance high. Real-time alerting and a recruiter dashboard needed to work seamlessly on a shared data model.",
-      banner: jobzillaFindJob,
+      banner: jobfondJobMobile,
     },
     solution: {
       index: "03 — SOLUTION",
       text: "A matching engine that scores listings against candidate profiles, server-streamed alerts that notify candidates the moment a relevant role drops, and a unified applicant tracking dashboard for employers — all on a type-safe shared data model.",
       brand: "JOBZILLA®",
+      banner: jobFindJobMock,
     },
     result: {
       index: "04 — RESULT",
       heading:
         "A hiring experience that feels instant — candidates find relevant roles in seconds and recruiters manage every applicant from one calm, fast interface.",
-      banner: jobzillaDashboard,
+      banner: jobFindJobMock,
     },
   },
 };
