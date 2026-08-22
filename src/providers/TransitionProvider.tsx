@@ -5,6 +5,7 @@ import {
   ReactNode,
   useCallback,
   useContext,
+  useEffect,
   useState,
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
@@ -34,6 +35,24 @@ export default function TransitionProvider({
   const [isExiting, setIsExiting] = useState(false);
   const [nextPath, setNextPath] = useState<string | null>(null);
   const [firstLoad, setFirstLoad] = useState(true);
+
+  const getColumnCount = useCallback(
+    (width: number) => {
+      if (width < 640) return Math.min(4, column);
+      if (width < 1024) return Math.min(7, column);
+      return column;
+    },
+    [column],
+  );
+
+  const [columns, setColumns] = useState(column);
+
+  useEffect(() => {
+    const update = () => setColumns(getColumnCount(window.innerWidth));
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, [getColumnCount]);
 
   const navigateTo = useCallback(
     (href: string) => {
@@ -77,7 +96,7 @@ export default function TransitionProvider({
 
       {isTransitioning && (
         <div className="fixed inset-0 z-9999 flex pointer-events-none">
-          {Array.from({ length: column }).map((_, index) => (
+          {Array.from({ length: columns }).map((_, index) => (
             <motion.div
               key={index}
               className="h-full flex-1 bg-black"
@@ -93,7 +112,7 @@ export default function TransitionProvider({
                 ease: [0.76, 0, 0.24, 1],
               }}
               onAnimationComplete={() => {
-                if (index !== column - 1) return;
+                if (index !== columns - 1) return;
                 if (isExiting) {
                   handleExitComplete();
                 } else if (firstLoad) {
