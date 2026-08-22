@@ -1,10 +1,45 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projectData } from "@/data/projectData";
+import { SITE_NAME } from "@/lib/site";
 import ProjectOverview from "@/components/projectDetails/ProjectOverview";
 import CaseStudySections from "@/components/projectDetails/CaseStudySections";
 import SolutionResultSection from "@/components/projectDetails/SolutionResultSection";
 import NextProject from "@/components/projectDetails/NextProject";
 import TechStack from "@/components/projectDetails/TechStack";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projectData.find(
+    (p) => p.title.toLowerCase() === slug.toLowerCase(),
+  );
+  if (!project) return {};
+
+  const url = `/project/${project.title.toLowerCase()}`;
+  return {
+    title: project.title,
+    description: project.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title: project.title,
+      description: project.description,
+      url,
+      siteName: SITE_NAME,
+      images: [{ url: project.image.src }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+      images: [project.image.src],
+    },
+  };
+}
 
 const WorkDetailPage = async ({
   params,
