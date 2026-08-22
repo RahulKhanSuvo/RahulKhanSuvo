@@ -21,16 +21,6 @@ export const ServicesSection = ({
     setOpenId((prev) => (prev === id ? null : id));
   };
 
-  // Helper for responsive alignment container styles
-  const getAlignmentClass = (
-    index: number,
-    alignment?: Service["alignment"],
-  ) => {
-    const isRight =
-      alignment === "right" || (alignment !== "left" && index % 2 === 1);
-    return isRight ? "items-end text-right ml-auto" : "items-start text-left";
-  };
-
   return (
     <section
       id="services"
@@ -48,11 +38,20 @@ export const ServicesSection = ({
         <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20">
           {services.map((service, index) => {
             const isOpen = openId === service.id;
+            const isRight =
+              service.alignment === "right" ||
+              (service.alignment !== "left" && index % 2 === 1);
 
             return (
-              <div
+              <motion.div
                 key={service.id}
-                className={`flex flex-col max-w-full ${getAlignmentClass(index, service.alignment)}`}
+                initial={{ opacity: 0, x: isRight ? 100 : -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className={`flex flex-col max-w-full ${
+                  isRight ? "items-end text-right ml-auto" : "items-start text-left"
+                }`}
               >
                 {/* Clickable Header Row */}
                 <div
@@ -119,7 +118,7 @@ export const ServicesSection = ({
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
         </div>
