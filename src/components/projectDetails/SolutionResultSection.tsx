@@ -24,7 +24,7 @@ export default function SolutionResultSection({
   sideImageAlt = "",
 }: SolutionResultProps) {
   return (
-    <section className="pb-16 bg-white text-gray-900">
+    <section className="pb-6 bg-white text-gray-900">
       <Container>
         {/* Top Banner Image */}
         <MotionImage
