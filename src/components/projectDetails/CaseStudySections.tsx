@@ -36,7 +36,7 @@ export default function CaseStudySections({
         <div>
           {/* Row 1: Intro Section (Text Left, Image Right) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-5 flex gap-4 items-start">
+            <div className="lg:col-span-5 flex flex-col md:flex-row gap-4 items-start">
               <span className="text-xs font-mono uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
@@ -48,7 +48,7 @@ export default function CaseStudySections({
               <MotionImage
                 src={intro.imageUrl}
                 alt={intro.imageAlt}
-                className="w-full aspect-4/3"
+                className="w-full aspect-square md:aspect-4/3"
               />
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function CaseStudySections({
               <MotionImage
                 src={challenge.imageUrl}
                 alt={challenge.imageAlt}
-                className="w-full aspect-4/5"
+                className="w-full aspect-square md:aspect-4/5"
               />
             </div>
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-4">
