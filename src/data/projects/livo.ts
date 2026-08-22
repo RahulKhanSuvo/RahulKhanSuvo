@@ -15,8 +15,8 @@ export const livo: Project = {
   description:
     "A curated commerce platform for Livo, a house of premium luxury designer furniture — where archival craftsmanship meets a quiet, editorial shopping experience.",
   stack: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
-  live: "https://livo.example.com",
-  github: "https://github.com/example/livo",
+  live: "https://livo-chi.vercel.app",
+  github: "https://github.com/RahulKhanSuvo/livo",
   image: livomainImage,
   gallery: [
     { src: livomainHero, alt: "Livo atelier homepage" },

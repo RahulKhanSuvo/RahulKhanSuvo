@@ -22,8 +22,8 @@ export const jobzilla: Project = {
     "Prisma",
     "Tailwind CSS",
   ],
-  live: "https://jobzilla.example.com",
-  github: "https://github.com/example/jobzilla",
+  live: "https://job-zilla.vercel.app",
+  github: "https://github.com/RahulKhanSuvo/JobZilla",
   image: jobzillamainImage,
   gallery: [
     { src: jobzillCandidateDashboard, alt: "JobZilla Candidate Dashboard" },
