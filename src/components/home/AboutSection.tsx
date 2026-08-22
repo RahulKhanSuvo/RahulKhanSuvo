@@ -5,12 +5,13 @@ import { motion } from "motion/react";
 import { Container } from "../common/Container";
 import softvencLogo from "@/assets/images/softvencLogo.jpeg";
 import { SectionTitle } from "../shared/SectionTitle";
+import CountUp from "../CountUp";
 
 const stats = [
-  { value: "1+", label: "Years of Professional Experience" },
-  { value: "3+", label: "Years Building Web Applications" },
-  { value: "15+", label: "Projects Delivered" },
-  { value: "100%", label: "Commitment to Craft" },
+  { value: 1, suffix: "+", label: "Years of Professional Experience" },
+  { value: 3, suffix: "+", label: "Years Building Web Applications" },
+  { value: 15, suffix: "+", label: "Projects Delivered" },
+  { value: 100, suffix: "%", label: "Commitment to Craft" },
 ];
 
 export const AboutSection = () => {
@@ -123,9 +124,13 @@ export const AboutSection = () => {
           className="mt-28 sm:mt-36 grid grid-cols-2 lg:grid-cols-4 border-t border-neutral-200 pt-12 gap-8"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col gap-2">
+            <div
+              key={stat.label}
+              className="flex flex-col gap-2  items-center text-center"
+            >
               <p className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900">
-                {stat.value}
+                <CountUp to={stat.value} className="inline-block" />
+                <span>{stat.suffix}</span>
               </p>
               <p className="text-xs sm:text-sm text-neutral-500 max-w-56 leading-normal">
                 {stat.label}
