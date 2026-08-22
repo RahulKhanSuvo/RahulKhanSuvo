@@ -1,4 +1,4 @@
-<h1 align="left">Hi, I'm [YOUR NAME].</h1>
+<h1 align="left">Hi, I'm Suvo.</h1>
 
 ###
 
@@ -11,6 +11,14 @@
 ###
 
 <p align="left">🧭 ~1 year paid, 2+ years hands-on<br>🌱 learning backend architecture & system design<br>🛠 trying to ship interfaces that stay fast and readable as they grow</p>
+
+###
+
+<h2 align="left">// how I build</h2>
+
+###
+
+<p align="left">Small, readable, fast — in that order.<br>I'd rather refactor than add another <code>if</code>.<br>Types when they help, not because they're trendy.</p>
 
 ###
 
@@ -31,7 +39,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
   <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" height="40" alt="tailwind logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" height="40" alt="tailwind logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
   <img width="12" />
@@ -58,6 +66,10 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" height="40" alt="graphql logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" height="40" alt="redis logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" height="40" alt="prisma logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongoose/mongoose-original.svg" height="40" alt="mongoose logo"  />
 </div>
 
 ###
@@ -83,9 +95,3 @@
 </div>
 
 ###
-
-<h2 align="left">say hi</h2>
-
-###
-
-<p align="left">LinkedIn — [YOUR LINKEDIN LINK]<br>Email — [YOUR EMAIL]</p>
