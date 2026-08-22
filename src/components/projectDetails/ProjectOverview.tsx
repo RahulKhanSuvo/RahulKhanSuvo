@@ -32,7 +32,7 @@ export default function ProjectOverview({
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6 pt-2 items-start">
           {/* Client */}
           <div className="lg:col-span-3 space-y-2">
-            <span className="block text-xs uppercase tracking-wider text-gray-400 font-medium">
+            <span className="block text-base md:text-2xl uppercase tracking-wider text-gray-400 font-medium">
               Client
             </span>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-black uppercase">
