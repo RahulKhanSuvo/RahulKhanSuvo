@@ -1,5 +1,6 @@
 import { Container } from "../common/Container";
 import MotionImage from "../ui/MotionImage";
+import RevealImage from "../ui/RevealImage";
 
 interface ProjectOverviewProps {
   client?: string;
@@ -21,12 +22,14 @@ export default function ProjectOverview({
   return (
     <section className="mt-24">
       <Container>
-        <MotionImage
-          src={imageUrl}
-          alt={`${client} project header`}
-          priority
-          className="w-full aspect-square md:aspect-[1.2/0.5] mb-6"
-        />
+        <RevealImage className="w-full mb-6">
+          <MotionImage
+            src={imageUrl}
+            alt={`${client} project header`}
+            priority
+            className="w-full aspect-square md:aspect-[1.2/0.5]"
+          />
+        </RevealImage>
 
         {/* Project Details Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 pt-2 items-start">
