@@ -56,7 +56,7 @@ export const AboutSection = () => {
             I like to understand what a product is trying to achieve before
             deciding how it should be built. That means thinking about the user
             experience, technical trade-offs, performance, maintainability, and
-            what makes sense for the product as it grows.
+            what makes sense as the product grows.
           </ScrollReveal>
           <ScrollReveal
             containerClassName="!my-0"
@@ -69,18 +69,11 @@ export const AboutSection = () => {
           </ScrollReveal>
           <ScrollReveal
             containerClassName="!my-0"
-            textClassName="!text-xl sm:!text-2xl lg:!text-[1.75rem] !font-normal tracking-tight text-neutral-800 leading-snug sm:leading-relaxed lg:leading-[1.5]"
+            textClassName="!text-xl sm:!text-2xl lg:!text-[1.75rem] !font-medium tracking-tight text-neutral-800 leading-snug sm:leading-relaxed lg:leading-[1.5]"
           >
-            I&apos;m comfortable taking ownership of a problem, working across
-            different parts of a product, and making practical decisions instead
-            of adding unnecessary complexity.
-          </ScrollReveal>
-          <ScrollReveal
-            containerClassName="!my-0"
-            textClassName="!text-xl sm:!text-2xl lg:!text-[1.75rem] !font-semibold tracking-tight text-neutral-900 leading-snug sm:leading-relaxed lg:leading-[1.5]"
-          >
-            I don&apos;t just want to complete the task. I want to understand it
-            well enough to build the right solution.
+            I don&apos;t just build what I&apos;m asked to build. I try to
+            understand why it needs to be built and find the right way to build
+            it.
           </ScrollReveal>
         </div>
 
