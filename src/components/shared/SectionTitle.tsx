@@ -10,6 +10,8 @@ export const SectionTitle = ({
 }) => {
   return (
     <HyperText
+      startOnView
+      animateOnHover
       className={cn(
         "uppercase text-black text-6xl md:text-[6rem] font-bold font-heading leading-none",
         className,
