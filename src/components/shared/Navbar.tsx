@@ -109,7 +109,7 @@ const Navbar = () => {
 
           {/* Resume Download Pill Button */}
           <a
-            href="https://docs.google.com/document/d/1QYdGdFptLXmf4PRRw0J5H-T--B7jPCayBZN35Xqttg0/export?format=pdf"
+            href="https://drive.google.com/uc?export=download&id=1pSFqoKZopMkmUvAmYDRYunMG8L5c-dQi"
             download="Rahul_Khan_Resume.pdf"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded border border-neutral-900 bg-neutral-900 text-white text-xs font-mono tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-neutral-900 shadow-sm group cursor-pointer"
@@ -198,7 +198,7 @@ const Navbar = () => {
 
               <motion.a
                 variants={itemVariants}
-                href="https://docs.google.com/document/d/1QYdGdFptLXmf4PRRw0J5H-T--B7jPCayBZN35Xqttg0/export?format=pdf"
+                href="https://drive.google.com/uc?export=download&id=1pSFqoKZopMkmUvAmYDRYunMG8L5c-dQi"
                 download="Rahul_Khan_Resume.pdf"
                 rel="noopener noreferrer"
                 className="mt-12 inline-flex w-fit items-center gap-2 px-5 py-2 rounded border border-white text-white text-xs font-mono tracking-wider uppercase hover:bg-white hover:text-neutral-900 transition-colors duration-300"
