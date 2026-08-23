@@ -61,12 +61,12 @@ export const ServicesSection = ({
                   className="inline-flex items-baseline cursor-pointer group flex-wrap gap-x-3 sm:gap-x-4 select-none"
                 >
                   {/* Title */}
-                  <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-[5.25rem] font-bold tracking-tight text-neutral-900 leading-none transition-colors duration-300 group-hover:text-neutral-600">
-                    {service.title}
-                  </h3>
+                <h3 className="text-3xl sm:text-5xl lg:text-6xl xl:text-[5.25rem] font-bold tracking-tight text-neutral-900 leading-none transition-colors duration-300 group-hover:text-neutral-600">
+                  {service.title}
+                </h3>
 
-                  {/* Inline Image Pill with Parentheses */}
-                  <span className="inline-flex items-center font-light text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem] text-neutral-900">
+                {/* Inline Image Pill with Parentheses */}
+                <span className="inline-flex items-center font-light text-2xl sm:text-4xl lg:text-5xl xl:text-[4.5rem] text-neutral-900">
                     (
                     <motion.span
                       whileHover={{ scale: 1.08 }}
@@ -101,19 +101,21 @@ export const ServicesSection = ({
                 </div>
 
                 {/* Expanded Content Sub-row */}
-                <AnimatePresence>
+                <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-
-                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                      className="overflow-hidden mt-4 sm:mt-5 flex flex-col gap-3"
+                      key="content"
+                      initial={{ gridTemplateRows: "0fr", opacity: 0 }}
+                      animate={{ gridTemplateRows: "1fr", opacity: 1 }}
+                      exit={{ gridTemplateRows: "0fr", opacity: 0 }}
+                      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                      className="grid"
                     >
-                      <p className="text-base sm:text-lg font-normal text-neutral-600 leading-relaxed">
-                        {service.description}
-                      </p>
+                      <div className="overflow-hidden">
+                        <p className="pt-4 sm:pt-5 text-base sm:text-lg font-normal text-neutral-600 leading-relaxed">
+                          {service.description}
+                        </p>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
