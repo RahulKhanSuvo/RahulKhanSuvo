@@ -6,6 +6,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
@@ -21,6 +22,8 @@ const TransitionContext = createContext<TransitionContextType>({
 
 export const usePageTransition = () => useContext(TransitionContext);
 
+const REVEAL_SAFETY_MS = 2500;
+
 export default function TransitionProvider({
   children,
   column = 11,
@@ -31,8 +34,7 @@ export default function TransitionProvider({
   const router = useRouter();
   const pathname = usePathname();
 
-  const [isTransitioning, setIsTransitioning] = useState(true);
-  const [isExiting, setIsExiting] = useState(false);
+  const [phase, setPhase] = useState<"idle" | "covering" | "revealing">("idle");
   const [nextPath, setNextPath] = useState<string | null>(null);
   const [firstLoad, setFirstLoad] = useState(true);
 
@@ -54,75 +56,90 @@ export default function TransitionProvider({
     return () => window.removeEventListener("resize", update);
   }, [getColumnCount]);
 
+  // Reveal only after the destination route has actually committed (pathname
+  // changed). This is what fixes the "blank page revealed before it loaded" bug
+  // — the cover stays up until the new page is really rendered.
+  useEffect(() => {
+    if (phase === "covering" && nextPath && pathname === nextPath) {
+      setPhase("revealing");
+    }
+  }, [pathname, phase, nextPath]);
+
+  // Safety net: if navigation never commits (error / blocked), reveal anyway so
+  // the cover never gets stuck.
+  const safetyRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    if (phase !== "covering") return;
+    safetyRef.current = setTimeout(() => setPhase("revealing"), REVEAL_SAFETY_MS);
+    return () => {
+      if (safetyRef.current) clearTimeout(safetyRef.current);
+    };
+  }, [phase]);
+
   const navigateTo = useCallback(
     (href: string) => {
-      if (isTransitioning || pathname === href) return;
-
+      if (firstLoad || phase !== "idle" || pathname === href) return;
       setNextPath(href);
-      setIsTransitioning(true);
-      setIsExiting(false);
+      setPhase("covering");
     },
-    [isTransitioning, pathname],
+    [firstLoad, phase, pathname],
   );
 
   const handleCoverComplete = () => {
-    if (!nextPath) return;
-
-    // Navigate while the screen is completely covered.
-    router.push(nextPath);
-
-    // Start the exit animation shortly after navigation.
-    setTimeout(() => {
-      setIsExiting(true);
-    }, 100);
-  };
-
-  const handleExitComplete = () => {
-    setIsTransitioning(false);
-    setIsExiting(false);
-    setNextPath(null);
+    if (nextPath) router.push(nextPath);
   };
 
   const handleRevealComplete = () => {
-    setIsTransitioning(false);
-    setIsExiting(false);
+    setPhase("idle");
     setNextPath(null);
-    setFirstLoad(false);
   };
+
+  const handleFirstLoadComplete = () => {
+    setFirstLoad(false);
+    setPhase("idle");
+    setNextPath(null);
+  };
+
+  const show = firstLoad || phase !== "idle";
 
   return (
     <TransitionContext.Provider value={{ navigateTo }}>
       {children}
 
-      {isTransitioning && (
+      {show && (
         <div className="fixed inset-0 z-9999 flex pointer-events-none">
-          {Array.from({ length: columns }).map((_, index) => (
-            <motion.div
-              key={index}
-              className="h-full flex-1 bg-black"
-              initial={{
-                y: firstLoad ? "0%" : "-100%",
-              }}
-              animate={{
-                y: isExiting ? "100%" : firstLoad ? "100%" : "0%",
-              }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.06,
-                ease: [0.76, 0, 0.24, 1],
-              }}
-              onAnimationComplete={() => {
-                if (index !== columns - 1) return;
-                if (isExiting) {
-                  handleExitComplete();
-                } else if (firstLoad) {
-                  handleRevealComplete();
-                } else {
-                  handleCoverComplete();
-                }
-              }}
-            />
-          ))}
+          {Array.from({ length: columns }).map((_, index) => {
+            const state = firstLoad ? "first" : phase;
+
+            const initial =
+              state === "first" || state === "revealing" ? "0%" : "-100%";
+            const animate = state === "first" || state === "covering" ? "0%" : "100%";
+
+            const onDone =
+              state === "first"
+                ? handleFirstLoadComplete
+                : state === "covering"
+                  ? handleCoverComplete
+                  : handleRevealComplete;
+
+            return (
+              <motion.div
+                key={index}
+                className="h-full flex-1 bg-black"
+                initial={{ y: initial }}
+                animate={{ y: animate }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.06,
+                  ease: [0.76, 0, 0.24, 1],
+                }}
+                onAnimationComplete={() => {
+                  if (index !== columns - 1) return;
+                  onDone();
+                }}
+              />
+            );
+          })}
         </div>
       )}
     </TransitionContext.Provider>
