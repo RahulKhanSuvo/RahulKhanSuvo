@@ -27,7 +27,7 @@ export default function ProjectOverview({
             src={imageUrl}
             alt={`${client} project header`}
             priority
-            className="w-full aspect-square md:aspect-[1.2/0.5]"
+            className="w-full aspect-square lg:aspect-[1.2/0.5]"
           />
         </RevealImage>
 
