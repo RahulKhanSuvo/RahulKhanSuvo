@@ -18,7 +18,15 @@ export const livo: Project = {
   aspect: "hero",
   description:
     "A curated commerce platform for Livo, a house of premium luxury designer furniture — where archival craftsmanship meets a quiet, editorial shopping experience.",
-  stack: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
+  stack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Prisma",
+    "Stripe",
+  ],
   live: "https://livo-chi.vercel.app",
   github: "https://github.com/RahulKhanSuvo/livo",
   image: livomainImage,
@@ -34,25 +42,25 @@ export const livo: Project = {
       index: "01 — INTRO",
       title: "Livo",
       description:
-        "Livo is a luxury furniture house selling limited-run designer pieces from hand-joined walnut seating to cast-bronze lighting. The brand needed a storefront that feels like a gallery, not a marketplace, while still converting high-intent collectors.",
+        "Livo is the storefront for a house of premium, made-to-order furniture — pieces like hand-joined walnut seating and cast-bronze lighting that sell for five figures and take months to produce. The brand didn't want a marketplace; it wanted a gallery that still converts high-intent collectors. I built the storefront and the backend behind it: the product experience, the configuration and ordering flow, and the dashboard the atelier team uses to manage commissions. It was worth building because the furniture's value is in its material and craft, and a generic template would erase exactly what the buyer pays for.",
       banner: livoProductMockup,
     },
     challenge: {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
-        "Selling five-figure, made-to-order furniture online means buyers need tactile confidence without touching the piece. We had to render material truth grain, patina, scale at gallery fidelity, while handling bespoke configuration, long lead times, and white-glove logistics without breaking the calm of the experience.",
+        "Selling made-to-order furniture online means asking someone to commit to a five-figure piece they can't touch. The real difficulty was giving tactile confidence through a screen — showing true grain, patina, and scale at gallery fidelity — while the product itself is bespoke, with material and finish options, a deposit, and a long lead time tied to white-glove logistics. That constraint mattered because any friction or visual distrust in the configurator or checkout breaks the one thing the brand sells: calm, considered confidence. The experience had to stay quiet while the underlying logic got complicated.",
       banner: livoPhoneWithHand,
     },
     solution: {
       index: "03 — SOLUTION",
-      text: "A Next.js storefront with an editorial product architecture: room-context galleries, a real-time material and finish configurator, and 3D-accurate scale previews. Bespoke orders, deposits, and lead-time logic run on a type-safe Node/PostgreSQL backend with Stripe for staged payments and a clienteling dashboard for the atelier team.",
+      text: "I built an editorial Next.js storefront with room-context galleries so pieces read in a real space, not on a white card. A real-time material and finish selector updates the preview instantly. A type-safe Node/PostgreSQL backend models bespoke orders, deposits, and lead times, with Stripe for staged payments, and the same model powers the atelier clienteling dashboard — keeping storefront and ops consistent and the code maintainable.",
       brand: "LIVO®",
     },
     result: {
       index: "04 — RESULT",
       heading:
-        "A composed, gallery-grade commerce experience where collectors configure and commission pieces with confidence lifting made-to-order conversion while keeping the brand's restrained, luxury tone intact.",
+        "The result is a gallery-grade storefront where collectors can configure and commission made-to-order pieces with confidence, and the atelier team can manage those commissions from a single dashboard. The storefront keeps the brand's restrained tone while actually carrying a high-intent buyer through a complex, bespoke purchase — the part a normal e-commerce template can't do.",
       banner: livoDashboardMockup,
     },
   },
