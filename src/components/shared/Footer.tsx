@@ -65,10 +65,10 @@ export const Footer = () => {
             {/* Phone link */}
             <Magnet>
               <a
-                href="tel:+8801700000000"
+                href="tel:+8801609553810"
                 className="text-xl sm:text-3xl lg:text-4xl font-light tracking-tight text-neutral-400 hover:text-white transition-colors duration-300"
               >
-                +880 1609553810
+                +8801609553810
               </a>
             </Magnet>
           </motion.div>
