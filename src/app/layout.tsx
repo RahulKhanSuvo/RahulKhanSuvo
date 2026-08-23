@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
-  category: "portfolio",
+  alternates: { canonical: SITE_URL },
   openGraph: {
     type: "website",
     title: "Rahul Khan Suvo | Software Engineer",
@@ -58,6 +58,22 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE_NAME,
+    url: SITE_URL,
+    jobTitle: "Software Engineer",
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Full Stack Development",
+      "Web Performance",
+    ],
+    image: `${SITE_URL}/opengraph-image`,
+  };
+
   return (
     <html
       lang="en"
@@ -70,6 +86,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <TransitionProvider>
           <Navbar />
           <SmoothScroll>{children}</SmoothScroll>

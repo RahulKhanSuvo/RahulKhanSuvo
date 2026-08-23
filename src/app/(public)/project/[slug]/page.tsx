@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projectData } from "@/data/projectData";
-import { SITE_NAME } from "@/lib/site";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import ProjectOverview from "@/components/projectDetails/ProjectOverview";
 import CaseStudySections from "@/components/projectDetails/CaseStudySections";
 import SolutionResultSection from "@/components/projectDetails/SolutionResultSection";
@@ -59,8 +59,24 @@ const WorkDetailPage = async ({
   const challengeBanner = project.caseStudy.challenge.banner;
   const resultBanner = project.caseStudy.result.banner;
 
+  const projectJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.title,
+    description: project.description,
+    url: `${SITE_URL}/project/${project.title.toLowerCase()}`,
+    image: new URL(project.image.src, SITE_URL).toString(),
+    author: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+    applicationCategory: "WebApplication",
+    operatingSystem: "Web",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectJsonLd) }}
+      />
       <ProjectOverview
         client={project.title}
         overview={project.description}
@@ -98,7 +114,7 @@ const WorkDetailPage = async ({
       <NextProject
         title={nextProject.title}
         description={nextProject.description}
-        slug={nextProject.title}
+        slug={nextProject.title.toLowerCase()}
         imageUrl={nextProject.image.src}
       />
     </>

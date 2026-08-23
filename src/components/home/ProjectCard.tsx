@@ -50,7 +50,7 @@ export const ProjectCard = ({
       className={`group relative w-full ${aspectClasses[aspect]}`}
     >
       <TransitionLink
-        href={`/project/${title}`}
+        href={`/project/${title.toLowerCase()}`}
         className="block h-full w-full"
       >
         {/* Image */}
