@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { Container } from "../common/Container";
 import TransitionLink from "./TransitionLink";
@@ -33,17 +34,23 @@ const itemVariants = {
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { navigateTo } = usePageTransition();
+  const pathname = usePathname();
 
   const handleNav = (href: string) => {
     setOpen(false);
     if (href.startsWith("#")) {
-      const el = document.querySelector(href);
-      const lenis = getLenis();
-      if (lenis && el) {
-        lenis.scrollTo(el as HTMLElement, { offset: -90 });
-      } else if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+      if (pathname === "/") {
+        const el = document.querySelector(href);
+        const lenis = getLenis();
+        if (lenis && el) {
+          lenis.scrollTo(el as HTMLElement, { offset: -90 });
+        } else if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+        return;
       }
+      // Section lives on the home page — navigate home, then scroll.
+      navigateTo("/" + href);
       return;
     }
     navigateTo(href);
@@ -110,7 +117,6 @@ const Navbar = () => {
           {/* Resume Download Pill Button */}
           <a
             href="https://drive.google.com/uc?export=download&id=1pSFqoKZopMkmUvAmYDRYunMG8L5c-dQi"
-            download="Rahul_Khan_Resume.pdf"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded border border-neutral-900 bg-neutral-900 text-white text-xs font-mono tracking-wider uppercase transition-all duration-300 hover:bg-white hover:text-neutral-900 shadow-sm group cursor-pointer"
           >
