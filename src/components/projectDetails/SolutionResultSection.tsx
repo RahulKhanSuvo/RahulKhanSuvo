@@ -47,7 +47,7 @@ export default function SolutionResultSection({
               </p>
             </div>
             {/* Result Block */}
-            <div className=" flex flex-col lg:grid grid-cols-12 gap-4 lg:items-start">
+            <div className="hidden md:flex flex-col lg:grid grid-cols-12 gap-4 lg:items-start">
               <span className="sm:col-span-4 text-base lg:text-xl  uppercase text-gray-400 tracking-wider">
                 {resultIndex}
               </span>
