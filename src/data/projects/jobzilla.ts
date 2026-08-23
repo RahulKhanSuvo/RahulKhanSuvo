@@ -18,7 +18,15 @@ export const jobzilla: Project = {
   isFeatured: true,
   description:
     "A job search platform that connects employers with job seekers through smart matching, real-time alerts, and an applicant tracking dashboard.",
-  stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+  stack: [
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Prisma",
+    "Socket.io",
+  ],
   live: "https://job-zilla.vercel.app",
   github: "https://github.com/RahulKhanSuvo/jobZilla-server",
   image: jobzillamainImage,
@@ -34,26 +42,26 @@ export const jobzilla: Project = {
       index: "01 — INTRO",
       title: "JobZilla Project",
       description:
-        "Job searching is fragmented — job boards overwhelm candidates with noise while recruiters drown in unqualified applications. JobZilla was built to close that loop with intelligent matching on both sides.",
+        "JobZilla is a job platform built to fix a two-sided problem: candidates wade through boards full of noise, and recruiters wade through unqualified applications. It tries to close that loop by matching both sides instead of just listing postings. I built the frontend and the matching and alerting layer on top of a shared, type-safe data model. Its value lives almost entirely in relevance and speed — miss either and the product fails.",
       banner: jobHomeMock,
     },
     challenge: {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
-        "Delivering a fast, filterable search experience across thousands of listings while keeping relevance high. Real-time alerting and a recruiter dashboard needed to work seamlessly on a shared data model.",
+        "The difficulty was relevance at speed. Thousands of listings had to stay filterable and fast, and \"relevant\" had to mean something for both candidates and recruiters on the same data. Real-time alerts added another constraint: a candidate should hear about a matching role the moment it's posted, which means the matching logic can't only run when someone opens the page. All of it had to sit on one data model shared by the candidate and recruiter views.",
       banner: jobfondJobMobile,
     },
     solution: {
       index: "03 — SOLUTION",
-      text: "A matching engine that scores listings against candidate profiles, server-streamed alerts that notify candidates the moment a relevant role drops, and a unified applicant tracking dashboard for employers — all on a type-safe shared data model.",
+      text: "I built a matching engine that scores listings against candidate profiles, so search results reflect fit rather than just keywords. To make alerts feel live, I used server-streamed notifications that fire the moment a relevant role drops, instead of polling on page load. I also built a unified applicant-tracking dashboard for employers, so recruiters manage every applicant from one interface. All three sit on one type-safe data model, which keeps the candidate and recruiter views consistent and stops the code from diverging as features grow.",
       brand: "JOBZILLA®",
       banner: jobFindJobMock,
     },
     result: {
       index: "04 — RESULT",
       heading:
-        "A hiring experience that feels instant — candidates find relevant roles in seconds and recruiters manage every applicant from one calm, fast interface.",
+        "Candidates find relevant roles in seconds, and recruiters manage every applicant from one fast interface. The product delivers a hiring workflow that feels instant on both sides — search, alerting, and tracking working from a single, consistent data model.",
       banner: jobFindJobMock,
     },
   },
