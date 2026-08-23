@@ -1,4 +1,3 @@
-import { Container } from "../common/Container";
 import {
   ScrollVelocityContainer,
   ScrollVelocityRow,
