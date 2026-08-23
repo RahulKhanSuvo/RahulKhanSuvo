@@ -42,7 +42,7 @@ export const livo: Project = {
       index: "01 — INTRO",
       title: "Livo",
       description:
-        "Livo is the storefront for a house of premium, made-to-order furniture — pieces like hand-joined walnut seating and cast-bronze lighting that sell for five figures and take months to produce. The brand didn't want a marketplace; it wanted a gallery that still converts high-intent collectors. I built the storefront and the backend behind it: the product experience, the configuration and ordering flow, and the dashboard the atelier team uses to manage commissions. It was worth building because the furniture's value is in its material and craft, and a generic template would erase exactly what the buyer pays for.",
+        "Livo is the storefront for a house of premium, made-to-order furniture that sells for five figures and takes months to produce. The brand wanted a gallery, not a marketplace. I built the storefront and backend — the product experience, configuration and ordering flow, and the atelier commission dashboard — because a generic template would erase the craft the buyer pays for.",
       banner: livoProductMockup,
     },
     challenge: {
