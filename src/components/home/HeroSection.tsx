@@ -13,7 +13,7 @@ function HeroSection() {
         <GlitchImage src={heroImage} alt="Hero" />
       </div>
       <div className="relative">
-        <ScrollVelocityContainer className="font-bold font-heading first-letter:uppercase text-[14rem]/[0.9] sm:text-[8rem]/[0.9] md:text-[16rem]/[0.9] pt-24 sm:pt-24 md:pt-30">
+        <ScrollVelocityContainer className="font-bold font-heading first-letter:uppercase text-[12rem]/[0.9] sm:text-[8rem]/[0.9] md:text-[16rem]/[0.9] pt-18 sm:pt-24 md:pt-30">
           <ScrollVelocityRow
             baseVelocity={18}
             direction={1}
@@ -43,7 +43,7 @@ function HeroSection() {
           </ScrollVelocityRow>
         </ScrollVelocityContainer>
       </div>
-      <Container className="flex flex-col gap-3 w-full sm:flex-row sm:justify-between sm:items-center sm:gap-4">
+      <Container className="flex gap-3 w-full flex-row justify-between sm:items-center sm:gap-4">
         {/*socil link*/}
         <div className="flex flex-wrap gap-3 text-sm sm:gap-4 sm:text-base">
           <a
