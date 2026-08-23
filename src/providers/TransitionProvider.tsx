@@ -11,6 +11,7 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "motion/react";
+import { getLenis } from "@/lib/lenis";
 
 type TransitionContextType = {
   navigateTo: (href: string) => void;
@@ -93,12 +94,33 @@ export default function TransitionProvider({
   const handleRevealComplete = () => {
     setPhase("idle");
     setNextPath(null);
+    scrollToHash();
   };
 
   const handleFirstLoadComplete = () => {
     setFirstLoad(false);
     setPhase("idle");
     setNextPath(null);
+    scrollToHash();
+  };
+
+  // If the URL carries a hash (e.g. arrived via "/#services" or a refresh on
+  // "/#contact"), scroll to that section after the page is shown. Retries while
+  // the target section mounts.
+  const scrollToHash = () => {
+    const hash = window.location.hash;
+    if (!hash) return;
+    const tryScroll = (attempt = 0) => {
+      const el = document.querySelector(hash);
+      const lenis = getLenis();
+      if (el) {
+        if (lenis) lenis.scrollTo(el as HTMLElement, { offset: -90 });
+        else el.scrollIntoView({ behavior: "smooth" });
+      } else if (attempt < 10) {
+        setTimeout(() => tryScroll(attempt + 1), 100);
+      }
+    };
+    tryScroll();
   };
 
   const show = firstLoad || phase !== "idle";
