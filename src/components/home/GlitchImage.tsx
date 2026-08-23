@@ -2,7 +2,7 @@
 
 import Image, { type StaticImageData } from "next/image";
 import { useEffect, useRef } from "react";
-
+import { motion } from "motion/react";
 interface GlitchImageProps {
   src: string | StaticImageData;
   alt?: string;
@@ -137,36 +137,45 @@ function GlitchImage({ src, alt = "Portrait" }: GlitchImageProps) {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative h-full w-full overflow-hidden"
-      onMouseEnter={() => (hoveringRef.current = true)}
-      onMouseMove={(e) => {
-        const rect = containerRef.current?.getBoundingClientRect();
-        if (!rect) return;
-        cursorRef.current = {
-          nx: (e.clientX - rect.left) / rect.width,
-          ny: (e.clientY - rect.top) / rect.height,
-        };
-      }}
-      onMouseLeave={() => {
-        hoveringRef.current = false;
-        cursorRef.current = null;
-      }}
+    <motion.div
+      initial={{ height: 0 }}
+      animate={{ height: "100%" }}
+      transition={{ duration: 1.2, delay: 0.3, ease: [0.76, 0, 0.24, 1] }}
+      className="absolute bottom-0 left-0 w-full overflow-hidden"
     >
-      <Image
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        fill
-        className="object-fill"
-        draggable={false}
-      />
-      <canvas
-        ref={canvasRef}
-        className="pointer-events-none absolute inset-0 h-full w-full"
-      />
-    </div>
+      <div className="absolute bottom-0 left-0">
+        <div
+          ref={containerRef}
+          className="relative h-full  overflow-hidden w-[62vw] max-w-72 sm:max-w-80 md:w-88 aspect-87.5/130"
+          onMouseEnter={() => (hoveringRef.current = true)}
+          onMouseMove={(e) => {
+            const rect = containerRef.current?.getBoundingClientRect();
+            if (!rect) return;
+            cursorRef.current = {
+              nx: (e.clientX - rect.left) / rect.width,
+              ny: (e.clientY - rect.top) / rect.height,
+            };
+          }}
+          onMouseLeave={() => {
+            hoveringRef.current = false;
+            cursorRef.current = null;
+          }}
+        >
+          <Image
+            ref={imgRef}
+            src={src}
+            alt={alt}
+            fill
+            className="object-fill"
+            draggable={false}
+          />
+          <canvas
+            ref={canvasRef}
+            className="pointer-events-none absolute inset-0 h-full w-full"
+          />
+        </div>
+      </div>
+    </motion.div>
   );
 }
 export default GlitchImage;
