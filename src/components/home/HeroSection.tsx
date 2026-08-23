@@ -13,7 +13,7 @@ function HeroSection() {
         <GlitchImage src={heroImage} alt="Hero" />
       </div>
       <div className="relative">
-        <ScrollVelocityContainer className="font-bold font-heading first-letter:uppercase text-[12rem]/[0.9] sm:text-[8rem]/[0.9] md:text-[16rem]/[0.9] pt-18 sm:pt-24 md:pt-30">
+        <ScrollVelocityContainer className="font-bold font-heading first-letter:uppercase text-[12rem]/[0.9] md:text-[14rem]/[0.9] lg:text-[16rem]/[0.9] pt-18 sm:pt-24 md:pt-30">
           <ScrollVelocityRow
             baseVelocity={18}
             direction={1}
