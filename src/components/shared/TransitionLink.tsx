@@ -21,12 +21,10 @@ export default function TransitionLink({
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
       onClick(event);
-
       if (event.defaultPrevented) return;
     }
 
     event.preventDefault();
-
     navigateTo(href);
   };
 
