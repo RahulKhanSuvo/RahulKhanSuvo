@@ -36,11 +36,11 @@ export default function CaseStudySections({
         <div className="flex flex-col gap-10 md:gap-6">
           {/* Row 1: Intro Section (Text Left, Image Right) */}
           <div className="flex flex-col-reverse md:grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 md:items-start">
-            <div className="md:col-span-5 flex flex-col lg:flex-row gap-2 md:gap-4 items-start justify-between">
+            <div className="md:col-span-5 flex flex-col gap-2 md:gap-4">
               <span className="text-base lg:text-xl uppercase text-gray-400 tracking-wider whitespace-nowrap">
                 {intro.index}
               </span>
-              <p className="text-base lg:text-2xl lg:max-w-lg font-medium text-black tracking-wider">
+              <p className="text-base lg:text-2xl font-medium text-black tracking-wider">
                 {intro.description}
               </p>
             </div>
