@@ -112,26 +112,39 @@ export default function TransitionProvider({
           {Array.from({ length: columns }).map((_, index) => {
             const state = firstLoad ? "first" : phase;
 
-            const initial =
-              state === "first" || state === "revealing" ? "0%" : "-100%";
-            const animate = state === "first" || state === "covering" ? "0%" : "100%";
+            let initialY: string;
+            let animateY: string;
+            let onDone: () => void;
+            let delay: number;
 
-            const onDone =
-              state === "first"
-                ? handleFirstLoadComplete
-                : state === "covering"
-                  ? handleCoverComplete
-                  : handleRevealComplete;
+            if (state === "first") {
+              // Intro: cover is already up, hold briefly, then wipe away.
+              initialY = "0%";
+              animateY = "100%";
+              onDone = handleFirstLoadComplete;
+              delay = 0.25 + index * 0.04;
+            } else if (state === "covering") {
+              initialY = "-100%";
+              animateY = "0%";
+              onDone = handleCoverComplete;
+              delay = index * 0.06;
+            } else {
+              // revealing
+              initialY = "0%";
+              animateY = "100%";
+              onDone = handleRevealComplete;
+              delay = index * 0.06;
+            }
 
             return (
               <motion.div
                 key={index}
                 className="h-full flex-1 bg-black"
-                initial={{ y: initial }}
-                animate={{ y: animate }}
+                initial={{ y: initialY }}
+                animate={{ y: animateY }}
                 transition={{
                   duration: 0.7,
-                  delay: index * 0.06,
+                  delay,
                   ease: [0.76, 0, 0.24, 1],
                 }}
                 onAnimationComplete={() => {
