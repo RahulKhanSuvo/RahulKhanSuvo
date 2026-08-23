@@ -49,18 +49,18 @@ export const livo: Project = {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
-        "Selling made-to-order furniture online means asking someone to commit to a five-figure piece they can't touch. The real difficulty was giving tactile confidence through a screen — showing true grain, patina, and scale at gallery fidelity — while the product itself is bespoke, with material and finish options, a deposit, and a long lead time tied to white-glove logistics. That constraint mattered because any friction or visual distrust in the configurator or checkout breaks the one thing the brand sells: calm, considered confidence. The experience had to stay quiet while the underlying logic got complicated.",
+        "Selling made-to-order furniture online means committing to a five-figure piece you can't touch. The hard part was conveying true grain, patina, and scale on a screen — with bespoke materials, finishes, deposits, and long lead times baked in — without breaking the brand's calm, considered confidence. The experience had to stay quiet while the logic got complex.",
       banner: livoPhoneWithHand,
     },
     solution: {
       index: "03 — SOLUTION",
-      text: "I built an editorial Next.js storefront with room-context galleries so pieces read in a real space, not on a white card. A real-time material and finish selector updates the preview instantly. A type-safe Node/PostgreSQL backend models bespoke orders, deposits, and lead times, with Stripe for staged payments, and the same model powers the atelier clienteling dashboard — keeping storefront and ops consistent and the code maintainable.",
+      text: "An editorial Next.js storefront with room-context galleries so pieces read in a real space. A real-time material and finish selector previews instantly. A type-safe Node/PostgreSQL backend models bespoke orders, deposits, and lead times with Stripe for staged payments — and the same model powers the atelier clienteling dashboard, keeping storefront and ops consistent.",
       brand: "LIVO®",
     },
     result: {
       index: "04 — RESULT",
       heading:
-        "The result is a gallery-grade storefront where collectors can configure and commission made-to-order pieces with confidence, and the atelier team can manage those commissions from a single dashboard. The storefront keeps the brand's restrained tone while actually carrying a high-intent buyer through a complex, bespoke purchase — the part a normal e-commerce template can't do.",
+        "A gallery-grade storefront where collectors configure and commission made-to-order pieces with confidence, and the atelier team manages those commissions from one dashboard — carrying a high-intent buyer through a bespoke purchase a normal template couldn't.",
       banner: livoDashboardMockup,
     },
   },

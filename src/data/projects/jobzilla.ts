@@ -49,19 +49,19 @@ export const jobzilla: Project = {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
-        "The difficulty was relevance at speed. Thousands of listings had to stay filterable and fast, and \"relevant\" had to mean something for both candidates and recruiters on the same data. Real-time alerts added another constraint: a candidate should hear about a matching role the moment it's posted, which means the matching logic can't only run when someone opens the page. All of it had to sit on one data model shared by the candidate and recruiter views.",
+        "Relevance at speed: thousands of listings had to stay filterable and fast, with \"relevant\" meaning something for both candidates and recruiters on the same data. Real-time alerts meant matching had to run the moment a role dropped, not just on page load. All of it sat on one data model shared by both views.",
       banner: jobfondJobMobile,
     },
     solution: {
       index: "03 — SOLUTION",
-      text: "I built a matching engine that scores listings against candidate profiles, so search results reflect fit rather than just keywords. To make alerts feel live, I used server-streamed notifications that fire the moment a relevant role drops, instead of polling on page load. I also built a unified applicant-tracking dashboard for employers, so recruiters manage every applicant from one interface. All three sit on one type-safe data model, which keeps the candidate and recruiter views consistent and stops the code from diverging as features grow.",
+      text: "A matching engine that scores listings against candidate profiles so results reflect fit, not just keywords. Server-streamed alerts fire the moment a relevant role drops. A unified applicant-tracking dashboard lets recruiters manage every applicant in one place. All three share one type-safe data model, so the two views stay consistent as features grow.",
       brand: "JOBZILLA®",
       banner: jobFindJobMock,
     },
     result: {
       index: "04 — RESULT",
       heading:
-        "Candidates find relevant roles in seconds, and recruiters manage every applicant from one fast interface. The product delivers a hiring workflow that feels instant on both sides — search, alerting, and tracking working from a single, consistent data model.",
+        "Candidates find relevant roles in seconds; recruiters manage every applicant from one fast interface. Search, alerting, and tracking run from a single consistent data model, so the workflow feels instant on both sides.",
       banner: jobFindJobMock,
     },
   },
