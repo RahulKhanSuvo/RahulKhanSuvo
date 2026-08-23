@@ -58,10 +58,11 @@ export default function TransitionProvider({
 
   // Reveal only after the destination route has actually committed (pathname
   // changed). This is what fixes the "blank page revealed before it loaded" bug
-  // — the cover stays up until the new page is really rendered.
+  // — the cover stays up until the new page is really rendered. Deferred to a
+  // microtask so we don't call setState synchronously inside the effect body.
   useEffect(() => {
     if (phase === "covering" && nextPath && pathname === nextPath) {
-      setPhase("revealing");
+      queueMicrotask(() => setPhase("revealing"));
     }
   }, [pathname, phase, nextPath]);
 
