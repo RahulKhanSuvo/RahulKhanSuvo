@@ -42,14 +42,14 @@ export const jobzilla: Project = {
       index: "01 — INTRO",
       title: "JobZilla Project",
       description:
-        "JobZilla is a job platform built to fix a two-sided problem: candidates wade through boards full of noise, and recruiters wade through unqualified applications. It tries to close that loop by matching both sides instead of just listing postings. I built the frontend and the matching and alerting layer on top of a shared, type-safe data model. Its value lives almost entirely in relevance and speed — miss either and the product fails.",
+        "JobZilla is a job platform built to fix a two-sided problem: candidates wade through boards full of noise, and recruiters wade through unqualified applications. It tries to close that loop by matching both sides instead of just listing postings. I built the frontend and the matching and alerting layer on top of a shared, type-safe data model. Its value lives almost entirely in relevance and speed miss either and the product fails.",
       banner: jobHomeMock,
     },
     challenge: {
       index: "02 — CHALLENGE",
       title: "Challenge",
       description:
-        "Relevance at speed: thousands of listings had to stay filterable and fast, with \"relevant\" meaning something for both candidates and recruiters on the same data. Real-time alerts meant matching had to run the moment a role dropped, not just on page load. All of it sat on one data model shared by both views.",
+        'Relevance at speed: thousands of listings had to stay filterable and fast, with "relevant" meaning something for both candidates and recruiters on the same data. Real-time alerts meant matching had to run the moment a role dropped, not just on page load. All of it sat on one data model shared by both views.',
       banner: jobfondJobMobile,
     },
     solution: {
