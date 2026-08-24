@@ -13,7 +13,7 @@ import { Project } from "@/types/project.type";
 export const livo: Project = {
   title: "Livo",
   category: "E-commerce",
-  year: "2024",
+  year: "2026",
   isFeatured: false,
   aspect: "hero",
   description:
