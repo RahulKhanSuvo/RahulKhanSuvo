@@ -10,7 +10,7 @@ function HeroSection() {
   return (
     <section className="relative overflow-hidden  md:h-[70vh] lg:h-screen flex justify-between flex-col py-5 px-1">
       <div className="relative">
-        <ScrollVelocityContainer className="font-bold font-heading text-[12rem]/[0.9] md:text-[14rem]/[0.9] lg:text-[16rem]/[0.9] pt-18 sm:pt-24 md:pt-30">
+        <ScrollVelocityContainer className="font-bold font-heading text-[12rem]/[0.9] md:text-[14rem]/[0.8] lg:text-[16rem]/[0.9] pt-18 md:pt-28 lg:pt-30">
           <ScrollVelocityRow
             baseVelocity={18}
             direction={1}
@@ -39,7 +39,10 @@ function HeroSection() {
             FULLSTACK DEVELOPER
           </ScrollVelocityRow>
         </ScrollVelocityContainer>
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-[62vw] max-w-72 sm:max-w-80 md:w-88 aspect-87.5/130">
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2
+         -translate-y-1/2 lg:-translate-y-1/3 z-10 w-[62vw] max-w-72 sm:max-w-80 md:w-88 aspect-87.5/130"
+        >
           <GlitchImage src={heroImage} alt="Hero" />
         </div>
       </div>
